@@ -1,0 +1,24 @@
+html,
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  min-width: 320px;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}

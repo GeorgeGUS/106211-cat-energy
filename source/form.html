@@ -2,21 +2,25 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи - Подбор программы</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
   <header class="page-header">
-    <img class="page-header__logo-image" src="https://placehold.it/33x38" alt="Супер-кот (лого)" width="33" height="38">
-    <a href="index.html" class="logo-title">
-      <b>Cat</b> Energy
-    </a>
-    <nav class="main-menu">
-      <button class="main-menu__toggle" type="button">Показать меню</button>
-      <ul class="main-menu__list">
-        <li class="main-menu__item"><a href="index.html">Главная</a></li>
-        <li class="main-menu__item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="main-menu__item"><a>Подбор программы</a></li>
+    <div class="page-logo">
+      <img class="page-logo__image" src="https://placehold.it/33x38" alt="Супер-кот (лого)" width="33" height="38">
+      <a href="index.html" class="page-logo__title">
+        <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
+      </a>
+    </div>
+    <nav class="page-nav">
+      <button class="page-nav__toggle" type="button">Показать меню</button>
+      <ul class="page-nav__list">
+        <li class="page-nav__item"><a href="index.html">Главная</a></li>
+        <li class="page-nav__item"><a href="catalog.html">Каталог продукции</a></li>
+        <li class="page-nav__item"><a>Подбор программы</a></li>
       </ul>
     </nav>
   </header>
@@ -24,7 +28,7 @@
   <main class="theme">
     <h1 class="visually-hidden">Cat Energy</h1>
     <form class="program-form" action="http://echo.htmlacademy.ru" method="post">
-      <h2 class="theme-title">Подбор программы</h2>
+      <h2 class="theme__title">Подбор программы</h2>
       <p class="program-form__text">
         Заполните анкету и мы подберем программу питания для вашего кота
       </p>
@@ -73,7 +77,7 @@
         </ul>
       </fieldset>
       <fieldset class="program-form__group form-unit">
-        <legend class="form-unit__title">Контактные данные (владельца кота)</legend>
+        <legend class="form-unit__title theme__subtitle">Контактные данные (владельца кота)</legend>
         <p class="form-unit__row">
           <label class="form-unit__item">
             <span class="form-unit__label">E-mail:*</span>
@@ -90,16 +94,16 @@
         </p>
       </fieldset>
       <fieldset class="program-form__group form-unit">
-        <legend class="form-unit__title">Комментарий</legend>
+        <legend class="form-unit__title theme__subtitle">Комментарий</legend>
         <p class="form-unit__row">
           <label class="form-unit__item">
             <textarea class="form-unit__textarea" name="Комментарий"
-                      cols="50" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+                      cols="38" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </p>
       </fieldset>
       <fieldset class="program-form__group form-unit">
-        <legend class="form-unit__title">Дополнительно</legend>
+        <legend class="form-unit__title theme__subtitle">Дополнительно</legend>
         <ul class="form-unit__list">
           <li class="form-unit__list-item">
             <label class="form-unit__item">
@@ -127,14 +131,14 @@
           </li>
         </ul>
       </fieldset>
-      <button class="theme-btn">Отправить заявку</button>
-      <p class="program-form__footnote theme-text"><sup>*</sup> — Обязательные поля</p>
+      <button class="theme__btn">Отправить заявку</button>
+      <p class="program-form__footnote theme__text"><sup>*</sup> — Обязательные поля</p>
     </form>
   </main>
 
   <footer class="page-footer">
     <div class="contacts">
-      <div class="container">
+      <div class="contacts__text-box">
         <p class="contacts__greeting">
           Приглашаем к сотрудничеству дилеров!
         </p>
@@ -142,14 +146,13 @@
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
       </div>
+      <div class="contacts__map"></div>
     </div>
 
-    <div class="map"></div>
-
     <div class="container">
-      <div class="page-footer__item">
-        <a href="index.html" class="logo-title">
-          <b>Cat</b> Energy
+      <div class="page-footer__item page-logo">
+        <a href="index.html" class="page-logo__title">
+          <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
         </a>
       </div>
       <section class="page-footer__item socials">

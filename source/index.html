@@ -2,43 +2,47 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
   <header class="page-header">
-    <img class="page-header__logo-image" src="https://placehold.it/33x38" alt="Супер-кот (лого)" width="33" height="38">
-    <a class="logo-title">
-      <b>Cat</b> Energy
-    </a>
-    <nav class="main-menu">
-      <button class="main-menu__toggle" type="button">Показать меню</button>
-      <ul class="main-menu__list">
-        <li class="main-menu__item"><a>Главная</a></li>
-        <li class="main-menu__item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="main-menu__item"><a href="form.html">Подбор программы</a></li>
+    <div class="page-logo">
+      <img class="page-logo__image" src="https://placehold.it/33x38" alt="Супер-кот (лого)" width="33" height="38">
+      <a class="page-logo__title">
+        <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
+      </a>
+    </div>
+    <nav class="page-nav">
+      <button class="page-nav__toggle" type="button">Показать меню</button>
+      <ul class="page-nav__list">
+        <li class="page-nav__item"><a>Главная</a></li>
+        <li class="page-nav__item"><a href="catalog.html">Каталог продукции</a></li>
+        <li class="page-nav__item"><a href="form.html">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="theme">
     <h1 class="visually-hidden">Cat Energy</h1>
-    <section class="promo">
+    <section class="intro">
       <div class="container">
-        <h2 class="promo__title theme-title">
+        <h2 class="intro__title theme__title">
           Функциональное питание для котов
         </h2>
-        <p class="promo__text">
+        <p class="intro__text">
           Занялся собой? Займись котом!
         </p>
-        <img class="promo__image" src="https://placehold.it/280x270" alt="Внешний вид товара" width="280" height="270">
+        <img class="intro__image" src="https://placehold.it/280x270" alt="Внешний вид товара" width="280" height="270">
       </div>
     </section>
 
     <section class="programs">
       <h2 class="visually-hidden">Программы тренировок</h2>
       <div class="container">
-        <a class="theme-btn" href="form.html">
+        <a class="theme__btn" href="form.html">
           Подобрать программу
         </a>
         <article class="programs__item program">
@@ -46,7 +50,7 @@
             <span class="program__icon"></span>
             Похудение
           </h3>
-          <p class="program__description.theme-text">
+          <p class="program__description.theme__text">
             Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
           </p>
           <a href="catalog.html" class="program__link">Каталог Slim</a>
@@ -56,7 +60,7 @@
             <span class="program__icon"></span>
             Набор массы
           </h3>
-          <p class="program__description.theme-text">
+          <p class="program__description.theme__text">
             Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
           </p>
           <a href="catalog.html" class="program__link">Каталог Pro</a>
@@ -66,29 +70,29 @@
 
     <section class="features">
       <div class="container">
-        <h2 class="theme-title">Как это работает</h2>
+        <h2 class="theme__title">Как это работает</h2>
         <ul class="features__list">
           <li class="features__item feature">
             <div class="feature__icon feature__icon--sleeve"></div>
-            <p class="feature__text.theme-text">
+            <p class="feature__text.theme__text">
               Функциональное питание содержит только полезные питательные вещества.
             </p>
           </li>
           <li class="features__item feature">
             <div class="feature__icon feature__icon--powder"></div>
-            <p class="feature__text.theme-text">
+            <p class="feature__text.theme__text">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
             </p>
           </li>
           <li class="features__item feature">
             <div class="feature__icon feature__icon--flatware"></div>
-            <p class="feature__text.theme-text">
+            <p class="feature__text.theme__text">
               Замените один-два приема обычной еды на наше функциональное питание.
             </p>
           </li>
           <li class="features__item feature">
             <div class="feature__icon feature__icon--clocks"></div>
-            <p class="feature__text.theme-text">
+            <p class="feature__text.theme__text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
             </p>
           </li>
@@ -97,8 +101,8 @@
     </section>
     <section class="example">
       <div class="container">
-        <h2 class="theme-title">Живой пример</h2>
-        <p class="example__text theme-text">
+        <h2 class="theme__title">Живой пример</h2>
+        <p class="example__text theme__text">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
         </p>
         <div class="example__achievements">
@@ -130,8 +134,8 @@
   </main>
 
   <footer class="page-footer">
-    <div class="contacts contacts--index">
-      <div class="container">
+    <div class="contacts">
+      <div class="contacts__text-box contacts__text-box--white">
         <p class="contacts__greeting">
           Приглашаем к сотрудничеству дилеров!
         </p>
@@ -139,14 +143,13 @@
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
       </div>
+      <div class="contacts__map"></div>
     </div>
 
-    <div class="map"></div>
-
     <div class="container">
-      <div class="page-footer__item">
-        <a class="logo-title">
-          <b>Cat</b> Energy
+      <div class="page-footer__item page-logo">
+        <a class="page-logo__title">
+          <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
         </a>
       </div>
       <section class="page-footer__item socials">

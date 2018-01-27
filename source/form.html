@@ -12,17 +12,17 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* Mobile layout by default */
-        background-image: url( "layouts/cat-energy-form-mobile.jpg" );
+        background-image: url( "layouts/cat-energy-form-mobile_.jpg" );
       }
       /* Tablet */
-      @media ( min-width: 760px ) {
+      @media ( min-width: 768px ) {
         HTML {
           /* Tablet layout */
           background-image: url( "layouts/cat-energy-form-tablet.jpg" );
         }
       }
       /* Desktop */
-      @media ( min-width: 1460px ) {
+      @media ( min-width: 1440px ) {
         HTML {
           /* Desktop layout */
           background-image: url( "layouts/cat-energy-form-desktop.jpg" );
@@ -35,26 +35,24 @@
   </head>
   <body>
 
-  <header class="page-header">
-    <div class="page-logo">
-      <img class="page-logo__image" src="https://placehold.it/33x38" alt="Супер-кот (лого)" width="33" height="38">
-      <a href="index.html" class="page-logo__title">
-        <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
-      </a>
-    </div>
+  <header class="page-header container">
+    <a class="page-logo" href="index.html">
+      <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+      <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+    </a>
     <nav class="page-nav">
       <button class="page-nav__toggle" type="button">Показать меню</button>
       <ul class="page-nav__list">
-        <li class="page-nav__item"><a href="index.html">Главная</a></li>
-        <li class="page-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="page-nav__item"><a>Подбор программы</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="index.html">Главная</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
+        <li class="page-nav__item"><a class="page-nav__link">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="theme">
     <h1 class="visually-hidden">Cat Energy</h1>
-    <form class="program-form" action="http://echo.htmlacademy.ru" method="post">
+    <form class="program-form container" action="http://echo.htmlacademy.ru" method="post">
       <h2 class="theme__title">Подбор программы</h2>
       <p class="program-form__text">
         Заполните анкету и мы подберем программу питания для вашего кота
@@ -125,7 +123,7 @@
         <p class="form-unit__row">
           <label class="form-unit__item">
             <textarea class="form-unit__textarea" name="Комментарий"
-                      cols="38" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+                      cols="33" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </p>
       </fieldset>
@@ -164,7 +162,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="contacts">
+    <div class="contacts container">
       <div class="contacts__text-box">
         <p class="contacts__greeting">
           Приглашаем к сотрудничеству дилеров!
@@ -179,7 +177,7 @@
     <div class="container">
       <div class="page-footer__item page-logo">
         <a href="index.html" class="page-logo__title">
-          <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
+          <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
         </a>
       </div>
       <section class="page-footer__item socials">
@@ -199,8 +197,10 @@
       <section class="page-footer__item rights-owner">
         <h2 class="visually-hidden">Правообладатель</h2>
         <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="rights-owner__name">HTML Academy</span>
-          <img class="rights-owner__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="20" height="20">
+          HTML Academy
+          <svg class="rights-owner__logo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09" fill="#666">
+            <path d="M13.62.02L13.47 0 0 1.41v24.66l13.47 8.02L26.9 26.1l.04-.03V1.41L13.62.01zm11.4 12.1L13.49 5.34v-.1l-.08.05-.1-.06v.11L1.94 12.12V3.15l11.54-1.21 11.55 1.2v8.99zM13.4 6.8l11.52 6.71-4.48 2.64-7.09-4.22-.01 1.41 5.9 3.52-.86.5-5.03-2.99-.01 1.42 3.82 2.27-.78.52-3.03-1.78-.01 1.41 1.85 1.1-1.8 1.07-11.36-6.75L13.41 6.8zM1.93 15.13l11.4 6.79.02 1.04-7.94-4.73-.02 1.42 7.98 4.8.02 1.07-7.97-4.74-.01 1.42 8.02 4.82.04.02 8.14-4.87V17l3.4-2.03v10.02l-11.54 6.87-11.54-6.87v-9.85z"/>
+          </svg>
         </a>
       </section>
     </div>

@@ -1,0 +1,17 @@
+.page-logo {
+  position: relative;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 45px;
+}
+
+.page-logo__image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.page-logo__title {
+  margin: auto;
+}

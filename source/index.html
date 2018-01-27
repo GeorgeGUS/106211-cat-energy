@@ -12,17 +12,17 @@
         background-repeat: no-repeat;
         background-position:  50% 0;
         /* Mobile layout by default */
-        background-image: url( "layouts/cat-energy-index-mobile.jpg" );
+        background-image: url( "layouts/cat-energy-index-mobile_.jpg" );
       }
       /* Tablet */
-      @media ( min-width: 760px ) {
+      @media ( min-width: 768px ) {
         HTML {
           /* Tablet layout */
           background-image: url( "layouts/cat-energy-index-tablet.jpg" );
         }
       }
       /* Desktop */
-      @media ( min-width: 1460px ) {
+      @media ( min-width: 1440px ) {
         HTML {
           /* Desktop layout */
           background-image: url( "layouts/cat-energy-index-desktop.jpg" );
@@ -35,19 +35,17 @@
   </head>
   <body>
 
-  <header class="page-header">
-    <div class="page-logo">
-      <img class="page-logo__image" src="https://placehold.it/33x38" alt="Супер-кот (лого)" width="33" height="38">
-      <a class="page-logo__title">
-        <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
-      </a>
-    </div>
+  <header class="page-header container">
+    <a class="page-logo">
+      <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+      <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+    </a>
     <nav class="page-nav">
       <button class="page-nav__toggle" type="button">Показать меню</button>
       <ul class="page-nav__list">
-        <li class="page-nav__item"><a>Главная</a></li>
-        <li class="page-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-        <li class="page-nav__item"><a href="form.html">Подбор программы</a></li>
+        <li class="page-nav__item"><a class="page-nav__link">Главная</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
+        <li class="page-nav__item"><a class="page-nav__link" href="form.html">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
@@ -62,7 +60,7 @@
         <p class="intro__text">
           Занялся собой? Займись котом!
         </p>
-        <img class="intro__image" src="https://placehold.it/280x270" alt="Внешний вид товара" width="280" height="270">
+        <img class="intro__image" src="img/index-can-mobile@1x.png" alt="Внешний вид товара" width="280" height="270">
       </div>
     </section>
 
@@ -146,9 +144,9 @@
           Затраты на питание: 15 000 руб.
         </p>
         <div class="example__comparison slider">
-          <div class="slider__images">
-            <img class="slider__image slider__image--active" src="https://placehold.it/280x240" width="280" height="240" alt="Толстый кот">
-            <img class="slider__image" src="https://placehold.it/280x240" width="280" height="240" alt="Худой кот">
+          <div class="slider__images full-width">
+            <img class="slider__image slider__image--active" src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
+            <img class="slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Худой кот">
           </div>
           <div class="slider__actions">
             <button class="slider__btn">Было</button>
@@ -161,7 +159,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="contacts">
+    <div class="contacts container">
       <div class="contacts__text-box contacts__text-box--white">
         <p class="contacts__greeting">
           Приглашаем к сотрудничеству дилеров!
@@ -170,13 +168,13 @@
           ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
         </p>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map full-width"></div>
     </div>
 
     <div class="container">
       <div class="page-footer__item page-logo">
         <a class="page-logo__title">
-          <img src="https://placehold.it/128x24" alt="Cat Energy" width="128" height="24">
+          <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
         </a>
       </div>
       <section class="page-footer__item socials">
@@ -196,8 +194,10 @@
       <section class="page-footer__item rights-owner">
         <h2 class="visually-hidden">Правообладатель</h2>
         <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="rights-owner__name">HTML Academy</span>
-          <img class="rights-owner__logo" src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="20" height="20">
+          HTML Academy
+          <svg class="rights-owner__logo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09" fill="#666">
+            <path d="M13.62.02L13.47 0 0 1.41v24.66l13.47 8.02L26.9 26.1l.04-.03V1.41L13.62.01zm11.4 12.1L13.49 5.34v-.1l-.08.05-.1-.06v.11L1.94 12.12V3.15l11.54-1.21 11.55 1.2v8.99zM13.4 6.8l11.52 6.71-4.48 2.64-7.09-4.22-.01 1.41 5.9 3.52-.86.5-5.03-2.99-.01 1.42 3.82 2.27-.78.52-3.03-1.78-.01 1.41 1.85 1.1-1.8 1.07-11.36-6.75L13.41 6.8zM1.93 15.13l11.4 6.79.02 1.04-7.94-4.73-.02 1.42 7.98 4.8.02 1.07-7.97-4.74-.01 1.42 8.02 4.82.04.02 8.14-4.87V17l3.4-2.03v10.02l-11.54 6.87-11.54-6.87v-9.85z"/>
+          </svg>
         </a>
       </section>
     </div>

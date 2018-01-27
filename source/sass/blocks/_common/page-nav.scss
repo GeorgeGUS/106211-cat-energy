@@ -1,0 +1,36 @@
+.page-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  width: 18px;
+  height: 18px;
+  font-size: 0;
+  background: transparent url("../img/icon-close.svg") no-repeat center;
+  border: none;
+  cursor: pointer;
+}
+
+.page-nav__list {
+  margin: 0 -20px;
+  padding: 0;
+  list-style: none;
+}
+
+.page-nav__item {
+  border-top: 1px solid #e6e6e6;
+
+  &:last-child {
+    border-bottom: 1px solid #e6e6e6;
+  }
+}
+
+.page-nav__link {
+  display: block;
+  padding: 22.5px;
+  font-family: $medium;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #111111;
+}

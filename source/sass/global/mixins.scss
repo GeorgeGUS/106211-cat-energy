@@ -4,3 +4,7 @@
   list-style: none;
 }
 
+@mixin reset-link($color: #000) {
+  text-decoration: none;
+  color: $color;
+}

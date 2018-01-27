@@ -1,0 +1,27 @@
+.intro {
+  background: #fff url("../img/index-background-mobile@1x.jpg") no-repeat top;
+  background-size: 100%;
+}
+
+.intro__wrapper {
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__title {
+  padding: 26px 0;
+}
+
+.intro__text {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.intro__image {
+  margin: 0 auto 2px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}

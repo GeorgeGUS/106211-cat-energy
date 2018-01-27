@@ -1,0 +1,8 @@
+.features__list {
+  @include reset-list();
+  padding-bottom: 23px;
+}
+
+.features__item {
+  margin: 20px 0;
+}

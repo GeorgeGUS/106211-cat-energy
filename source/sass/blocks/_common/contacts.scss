@@ -1,0 +1,28 @@
+.contacts__text-box {
+  display: flex;
+  padding: 25px 20px;
+  line-height: 20px;
+
+  &--white {
+    background-color: #ffffff;
+  }
+}
+
+.contacts__half {
+  margin: 0;
+  width: 50%;
+}
+
+.contacts__greeting {
+  text-transform: uppercase;
+}
+
+.contacts__address {
+  font-family: $arial;
+  font-size: 14px;
+}
+
+.contacts__map {
+  height: 362px;
+  background-color: #fdf7ef;
+}

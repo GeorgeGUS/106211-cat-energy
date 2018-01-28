@@ -20,9 +20,9 @@
   line-height: 1;
   text-align: center;
   text-transform: lowercase;
-  color: #444444;
+  color: $darkgrey;
   box-sizing: border-box;
-  background-color: $gray;
+  background-color: $grey;
 }
 
 .achievement__value {
@@ -33,7 +33,7 @@
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  color: #111111;
+  color: $black;
   text-transform: uppercase;
   border: 1px solid #cdcdcd;
   border-radius: 3px;

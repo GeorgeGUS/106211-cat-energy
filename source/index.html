@@ -55,7 +55,7 @@
     <section class="intro">
       <div class="intro__wrapper container">
         <h2 class="intro__title theme__title">
-          Функциональное питание для котов
+          Функциональное<br> питание для котов
         </h2>
         <p class="intro__text">
           Занялся собой? Займись котом!
@@ -145,13 +145,15 @@
         </p>
         <div class="example__comparison slider">
           <div class="slider__images full-width">
-            <img class="slider__image slider__image--active" src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
+            <input type="radio" id="before" class="visually-hidden" name="image-toggle" checked>
+            <img class="slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
+            <input type="radio" id="after" class="visually-hidden" name="image-toggle">
             <img class="slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Худой кот">
           </div>
           <div class="slider__actions">
-            <button class="slider__btn">Было</button>
+            <label for="before" class="slider__btn">Было</label>
             <span class="slider__scale"></span>
-            <button class="slider__btn">Стало</button>
+            <label for="after" class="slider__btn">Стало</label>
           </div>
         </div>
       </div>
@@ -172,7 +174,7 @@
     </div>
 
     <div class="container">
-      <div class="page-footer__item page-logo">
+      <div class="page-footer__item page-logo page-logo--footer">
         <a class="page-logo__title">
           <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
         </a>

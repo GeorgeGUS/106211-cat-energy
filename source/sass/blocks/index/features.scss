@@ -1,6 +1,10 @@
+.features {
+  padding: 20px 0;
+}
+
 .features__list {
   @include reset-list();
-  padding-bottom: 23px;
+  padding-bottom: 2px;
 }
 
 .features__item {

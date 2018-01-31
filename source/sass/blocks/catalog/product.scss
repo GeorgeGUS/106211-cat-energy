@@ -1,0 +1,44 @@
+.product {
+  display: flex;
+}
+
+.product__image {
+  width: 50%;
+
+  & > img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+}
+
+.product__content {
+  padding-top: 22px;
+  width: 50%;
+}
+
+.product__name {
+  font-weight: 300;
+}
+
+.product__brand {
+  display: block;
+}
+
+.product__details {
+  width: 100%;
+  font-family: $arial;
+
+  border-collapse: collapse;
+  color: $darkgrey;
+
+  & td {
+    padding: 0;
+    font-size: 12px;
+    line-height: 17px;
+  }
+
+  & td:last-child {
+    text-align: right;
+  }
+}

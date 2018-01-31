@@ -1,0 +1,29 @@
+.add-good {
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.add-good__name {
+  margin-top: 13px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.add-good__details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1;
+  color: #444444;
+}
+
+.add-good .theme__btn {
+  font-size: 16px;
+  margin-bottom: 17px;
+}

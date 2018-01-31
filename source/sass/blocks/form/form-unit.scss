@@ -1,0 +1,42 @@
+.form-unit {
+  padding: 0;
+  border: 0;
+  //border-top: 3px solid $green;
+
+  &--separated {
+    border-top: solid 1px #ededed;
+    border-bottom: solid 1px #ededed;
+  }
+}
+
+.form-unit__row {
+  margin: 14px 0;
+}
+
+.form-unit__item {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.form-unit__label,
+.form-unit__input,
+.form-unit__input::placeholder {
+  font-family: $regular;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.form-unit__label {
+  margin-right: 15px;
+  white-space: nowrap;
+}
+
+.form-unit__input {
+  flex-grow: 1;
+  width: 100px;
+  padding: 13px;
+  color: $darkgrey;
+  border: 1px solid #cdcdcd;
+}

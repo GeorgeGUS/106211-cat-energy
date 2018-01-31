@@ -1,0 +1,21 @@
+.more-products {
+  text-align: center;
+}
+
+.more-products__icon {
+  margin: 25px 0;
+  height: 30px;
+  background: url("../img/icon-plus-mobile.svg") no-repeat center;
+  opacity: 0.2;
+}
+
+.more-products__title {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.more-products__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
+}

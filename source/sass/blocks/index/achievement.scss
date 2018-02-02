@@ -1,0 +1,41 @@
+.achievement {
+  flex-grow: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 0;
+
+  & + & {
+    margin-left: 32px;
+  }
+}
+
+.achievement__title {
+  padding: 0 16px;
+  position: relative;
+  bottom: 0.75em;
+  font-family: $arial;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  text-transform: lowercase;
+  color: $darkgrey;
+  box-sizing: border-box;
+  background-color: $grey;
+}
+
+.achievement__value {
+  margin: 0;
+  padding: 15px 20px;
+  min-width: 124px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  box-sizing: border-box;
+}

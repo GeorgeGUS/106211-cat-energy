@@ -1,0 +1,24 @@
+.promotion {
+  margin-top: 39px;
+  margin-bottom: 35px;
+  padding-top: 65px;
+  padding-bottom: 45px;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+
+  &::before {
+    content: "";
+    margin: 0 auto 65px;
+    display: block;
+    width: 55px;
+    height: 60px;
+    background: url("../img/icon-gift.svg") no-repeat center;
+  }
+}
+
+.promotion__text {
+  margin: 0;
+  text-align: center;
+  font-family: $arial;
+  line-height: 18px;
+  color: #ffffff;
+}

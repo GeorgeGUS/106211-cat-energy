@@ -1,0 +1,16 @@
+.catalog {
+  padding-top: 25px;
+}
+
+.catalog__header {
+  padding-bottom: 18px;
+}
+
+.catalog__item {
+  padding: 0 20px 24px;
+  border-top: 1px solid #ededed;
+
+  &:last-child {
+    border-bottom: 1px solid #ededed;
+  }
+}

@@ -1,0 +1,111 @@
+.form-unit {
+  &--no-title {
+    padding: 10px 0;
+  }
+
+  &--bordered {
+    padding: 9px 0;
+    outline: 1px solid #ededed;
+  }
+}
+
+.form-unit__row {
+  margin: 14px 0;
+}
+
+.form-unit__item {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.form-unit__label,
+.form-unit__input,
+.form-unit__input::placeholder {
+  font-family: $regular;
+  font-size: 16px;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.form-unit__label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.form-unit--no-title .form-unit__label {
+  margin-right: 15px;
+}
+
+.form-unit__input {
+  flex-grow: 1;
+  padding: 13px;
+  color: $darkgrey;
+  border: 1px solid #cdcdcd;
+
+  &--textarea {
+    height: 150px;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  &--icon {
+    padding-right: 44px;
+    background-repeat: no-repeat;
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    background-position: calc(100% - 15px) center;
+    background-size: 17px 13px;
+  }
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+    background-position: calc(100% - 12px) center;
+    background-size: 20px;
+  }
+}
+
+.form-unit__list {
+  @include reset-list;
+}
+
+.form-unit__row,
+.form-unit__list {
+  padding: 0 20px;
+}
+
+.form-unit__list-item {
+  margin: 12px 0;
+}
+
+.form-unit__label--radio,
+.form-unit__label--checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    margin-right: 15px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #cdcdcd;
+    background-color: #ffffff;
+  }
+}
+
+.form-unit__label--radio::before {
+  border-radius: 50%;
+}
+
+.form-unit__radio:checked + .form-unit__label--radio::before {
+  background-image: radial-gradient($green 0, $green 6px, #ffffff 7px, #ffffff 100%);
+}
+
+.form-unit__checkbox:checked + .form-unit__label--checkbox::before {
+  background: url("../img/icon-tick.svg") no-repeat center;
+  background-size: 21px;
+}

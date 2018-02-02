@@ -1,0 +1,35 @@
+.intro {
+  padding-top: 27px;
+  background: #ffffff url("../img/index-background-mobile@1x.jpg") no-repeat top;
+  background-size: contain;
+}
+
+.intro__wrapper {
+  padding-bottom: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__title {
+  padding-bottom: 25px;
+  line-height: 1;
+}
+
+.intro__text {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.intro__image {
+  margin: 0 auto;
+  margin-bottom: 2px;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+}
+
+.intro__btn {
+  font-size: 14px;
+}

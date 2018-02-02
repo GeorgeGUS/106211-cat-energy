@@ -1,0 +1,77 @@
+.program__item {
+  margin-bottom: 20px;
+  padding: 20px 20px 0;
+  background-color: $grey;
+
+  &:last-child {
+    margin-bottom: 9px;
+  }
+}
+
+
+.program__title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 4px 2px;
+  font-size: 24px;
+  line-height: 50px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.program__icon {
+  position: relative;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $green;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--slim::after {
+    width: 50px;
+    height: 50px;
+    top: 22.5px;
+    background: url("../img/icon-cat-slim.svg") no-repeat center;
+  }
+
+  &--pro::after {
+    width: 70px;
+    height: 48px;
+    top: 25px;
+    background: url("../img/icon-cat-pro.svg") no-repeat center;
+  }
+}
+
+.program__description {
+  margin: 20px 0;
+}
+
+.program__link {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+
+  @include reset-link($black);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-top-color: #d9d9d9;
+  border-left: 0;
+
+  &::after {
+    content: "";
+    margin-left: 12px;
+    display: block;
+    width: 24px;
+    height: 1em;
+    background: url("../img/icon-right-arrow-long.svg") no-repeat right center;
+  }
+}

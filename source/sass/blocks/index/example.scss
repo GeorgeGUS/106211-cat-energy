@@ -1,0 +1,23 @@
+.example {
+  padding-top: 30px;
+  background-color: $grey;
+}
+
+.example__text {
+  padding-right: 5px;
+}
+
+.example__achievements {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.example__total-amount {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,0 +1,35 @@
+.additional-goods__title {
+  margin-top: 29px;
+  margin-bottom: 28px;
+}
+
+.additional-goods__list {
+  @include reset-list;
+  padding-top: 5px;
+}
+
+.additional-goods__item {
+  padding-bottom: 17px;
+  border-bottom: 1px solid #cdcdcd;
+
+  &:first-child {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+
+.additional-goods__name {
+  margin-top: 13px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.additional-goods__details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 1;
+  color: #444444;
+}

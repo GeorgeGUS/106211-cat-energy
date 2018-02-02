@@ -12,6 +12,10 @@
   padding-bottom: 20px;
   font-size: 36px;
   font-weight: normal;
+
+  &--top {
+    line-height: 40px;
+  }
 }
 
 .theme__block-title {
@@ -23,28 +27,17 @@
 
 .theme__subtitle {
   position: relative;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 33px;
   font-size: 24px;
   line-height: 1;
   font-weight: normal;
-  background-image: linear-gradient(to bottom, transparent 0,
-    transparent 15px, $green 15px, $green 18px,
-    transparent 18px, transparent 100%);
+  background-image: linear-gradient(to bottom, transparent 0, transparent 13px, $green 13px, $green 16px, transparent 16px, transparent 100%);
 
   span {
     display: table;
     padding: 0 20px;
     background-color: #ffffff;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 6px;
-    height: 3px;
-    background-color: $green;
-    z-index: -1;
   }
 }
 
@@ -57,10 +50,9 @@
 .theme__btn {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
   padding: 10px 20px;
   font-family: $regular;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;

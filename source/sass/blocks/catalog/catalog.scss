@@ -1,21 +1,16 @@
 .catalog {
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 25px;
 }
 
-.catalog__title {
-  padding-bottom: 40px;
+.catalog__header {
+  padding-bottom: 18px;
 }
 
 .catalog__item {
-  padding: 0 20px 4px;
+  padding: 0 20px 24px;
   border-top: 1px solid #ededed;
 
   &:last-child {
     border-bottom: 1px solid #ededed;
   }
-}
-
-.catalog__item .theme__btn {
-  font-size: 16px;
 }

@@ -53,8 +53,9 @@
   <main class="theme">
     <h1 class="visually-hidden">Cat Energy</h1>
     <section class="catalog">
-      <h2 class="container catalog__title theme__title">Каталог продукции</h2>
-
+      <div class="container catalog__header">
+        <h2 class="theme__title theme__title--top">Каталог продукции</h2>
+      </div>
       <article class="catalog__item">
         <div class="product">
           <div class="product__image">
@@ -240,7 +241,6 @@
 
       <div class="catalog__item">
         <div class="more-products">
-          <div class="more-products__icon"></div>
           <p class="more-products__title"><b>Показать еще 100500 товаров</b></p>
           <p class="more-products__text theme__text">На самом деле вкусов гораздо больше!</p>
         </div>
@@ -250,43 +250,45 @@
 
     <section class="additional-goods">
       <h2 class="additional-goods__title theme__subtitle"><span>Дополнительные товары</span></h2>
-      <div class="container additional-goods__list">
-        <article class="additional-goods__item add-good">
-          <h3 class="add-good__name">Сахарозаменитель</h3>
-          <p class="add-good__details theme__text">
-            1 Упаковка
-            <span class="add-good__price">100 Р.</span>
+      <div class="container">
+        <ul class="additional-goods__list">
+          <li class="additional-goods__item">
+            <h3 class="additional-goods__name">Сахарозаменитель</h3>
+            <p class="additional-goods__details theme__text">
+              <span class="additional-goods__volume">1 Упаковка (100 г)</span>
+              <span class="additional-goods__price">100 Р.</span>
+            </p>
+            <a href="#" class="theme__btn">Заказать</a>
+          </li>
+          <li class="additional-goods__item additional-goods">
+            <h3 class="additional-goods__name">Питьевая вода</h3>
+            <p class="additional-goods__details theme__text">
+              <span class="additional-goods__volume">5 литров</span>
+              <span class="additional-goods__price">50 Р.</span>
+            </p>
+            <a href="#" class="theme__btn">Заказать</a></li>
+          <li class="additional-goods__item additional-goods">
+            <h3 class="additional-goods__name">Молоко</h3>
+            <p class="additional-goods__details theme__text">
+              <span class="additional-goods__volume">1 литр</span>
+              <span class="additional-goods__price">100 Р.</span>
+            </p>
+            <a href="#" class="theme__btn">Заказать</a></li>
+          <li class="additional-goods__item additional-goods">
+            <h3 class="additional-goods__name">Витамины</h3>
+            <p class="additional-goods__details theme__text">
+              <span class="additional-goods__volume">1 упаковка (30 г)</span>
+              <span class="additional-goods__price">300 Р.</span>
+            </p>
+            <a href="#" class="theme__btn">Заказать</a></li>
+        </ul>
+        <div class="additional-goods__promotion promotion">
+          <p class="promotion__text">
+            Закажите все <br>
+            и получите чехол для <br>
+            кота в подарок!
           </p>
-          <a href="#" class="theme__btn">Заказать</a></article>
-        <article class="additional-goods__item add-good">
-          <h3 class="add-good__name">Питьевая вода</h3>
-          <p class="add-good__details theme__text">
-            5 литров
-            <span class="add-good__price">50 Р.</span>
-          </p>
-          <a href="#" class="theme__btn">Заказать</a></article>
-        <article class="additional-goods__item add-good">
-          <h3 class="add-good__name">Молоко</h3>
-          <p class="add-good__details theme__text">
-            1 литр
-            <span class="add-good__price">100 Р.</span>
-          </p>
-          <a href="#" class="theme__btn">Заказать</a></article>
-        <article class="additional-goods__item add-good">
-          <h3 class="add-good__name">Витамины</h3>
-          <p class="add-good__details theme__text">
-            1 упаковка (30 г)
-            <span class="add-good__price">300 Р.</span>
-          </p>
-          <a href="#" class="theme__btn">Заказать</a></article>
-      </div>
-      <div class="additional-goods__promotion promotion">
-        <div class="promotion__icon"></div>
-        <p class="promotion__text">
-          Закажите все <br>
-          и получите чехол для <br>
-          кота в подарок!
-        </p>
+        </div>
       </div>
     </section>
 

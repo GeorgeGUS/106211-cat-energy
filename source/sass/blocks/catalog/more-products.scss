@@ -1,12 +1,14 @@
 .more-products {
   text-align: center;
-}
 
-.more-products__icon {
-  margin: 25px 0;
-  height: 30px;
-  background: url("../img/icon-plus-mobile.svg") no-repeat center;
-  opacity: 0.2;
+  &::before {
+    content: "";
+    display: block;
+    margin: 25px 0;
+    height: 30px;
+    background: url("../img/icon-plus-mobile.svg") no-repeat center;
+    opacity: 0.2;
+  }
 }
 
 .more-products__title {

@@ -4,10 +4,11 @@
 
 .product__image {
   width: 50%;
+  display: flex;
+  justify-content: center;
 
   & > img {
-    width: 100%;
-    height: auto;
+    height: 144px;
     vertical-align: bottom;
   }
 }

@@ -8,12 +8,21 @@
   background: transparent url("../img/icon-close.svg") no-repeat center;
   border: none;
   cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .page-nav__list {
   margin: 0 -20px;
   padding: 0;
   list-style: none;
+
+  @include tablet {
+    display: flex;
+    margin: 0 -18px;
+  }
 }
 
 .page-nav__item {
@@ -21,6 +30,14 @@
 
   &:last-child {
     border-bottom: 1px solid #e6e6e6;
+  }
+
+  @include tablet {
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
@@ -34,4 +51,11 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $black;
+
+  @include tablet {
+    padding: 10px 18px;
+    font-family: $regular;
+    font-size: 18px;
+    line-height: 1.38px;
+  }
 }

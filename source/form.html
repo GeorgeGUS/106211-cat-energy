@@ -59,102 +59,110 @@
           Заполните анкету и мы подберем <br> программу питания для вашего кота
         </p>
       </div>
-      <section class="form-unit form-unit--no-title">
-        <p class="form-unit__row">
-          <label class="form-unit__item">
-            <span class="form-unit__label">Имя:*</span>
-            <input type="text" class="form-unit__input" name="Имя" placeholder="Барсик" required>
-          </label>
-        </p>
-        <p class="form-unit__row">
-          <label class="form-unit__item">
-            <span class="form-unit__label">Вес (кг):*</span>
-            <input type="text" class="form-unit__input" name="Вес" placeholder="7" required>
-          </label>
-        </p>
-        <p class="form-unit__row">
-          <label class="form-unit__item">
-            <span class="form-unit__label">Возраст (лет):</span>
-            <input type="text" class="form-unit__input" name="Возраст" placeholder="7">
-          </label>
-        </p>
-      </section>
-      <section class="form-unit form-unit--bordered">
-        <ul class="form-unit__list">
-          <li class="form-unit__list-item">
+      <div class="container">
+        <section class="form-unit form-unit--no-title">
+          <p class="form-unit__row">
             <label class="form-unit__item">
-              <input type="radio" name="Программа" value="Похудение" class="form-unit__radio visually-hidden" checked>
-              <span class="form-unit__label form-unit__label--radio">Похудение</span>
+              <span class="form-unit__label">Имя:*</span>
+              <input type="text" class="form-unit__input" name="Имя" placeholder="Барсик" required>
             </label>
-          </li>
-          <li class="form-unit__list-item">
+          </p>
+          <p class="form-unit__row">
             <label class="form-unit__item">
-              <input type="radio" name="Программа" value="Набор массы" class="form-unit__radio visually-hidden">
-              <span class="form-unit__label form-unit__label--radio">Набор массы</span>
+              <span class="form-unit__label">Вес (кг):*</span>
+              <input type="text" class="form-unit__input" name="Вес" placeholder="7" required>
             </label>
-          </li>
-          <li class="form-unit__list-item">
+          </p>
+          <p class="form-unit__row">
             <label class="form-unit__item">
-              <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)" class="form-unit__radio visually-hidden">
-              <span class="form-unit__label form-unit__label--radio">Не знаю (Нужен ваш совет)</span>
+              <span class="form-unit__label">Возраст (лет):</span>
+              <input type="text" class="form-unit__input" name="Возраст" placeholder="7">
             </label>
-          </li>
-        </ul>
-      </section>
+          </p>
+        </section>
+        <section class="form-unit form-unit--bordered">
+          <ul class="form-unit__list">
+            <li class="form-unit__list-item">
+              <label class="form-unit__item">
+                <input type="radio" name="Программа" value="Похудение" class="form-unit__radio visually-hidden" checked>
+                <span class="form-unit__label form-unit__label--radio">Похудение</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item">
+                <input type="radio" name="Программа" value="Набор массы" class="form-unit__radio visually-hidden">
+                <span class="form-unit__label form-unit__label--radio">Набор массы</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item">
+                <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)" class="form-unit__radio visually-hidden">
+                <span class="form-unit__label form-unit__label--radio">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </section>
+      </div>
       <section class="form-unit">
         <h3 class="form-unit__title theme__subtitle"><span>Контактные данные <br> (владельца кота)</span></h3>
-        <p class="form-unit__row">
+        <div class="container">
+          <p class="form-unit__row">
           <label class="form-unit__item">
             <span class="form-unit__label">E-mail:*</span>
             <input type="email" class="form-unit__input form-unit__input--icon
-          form-unit__input--email" name="E-mail" placeholder="kuklachev@gmail.com" required>
+                  form-unit__input--email" name="E-mail" placeholder="kuklachev@gmail.com" required>
           </label>
         </p>
-        <p class="form-unit__row">
-          <label class="form-unit__item">
-            <span class="form-unit__label">Телефон:*</span>
-            <input type="text" class="form-unit__input form-unit__input--icon
-          form-unit__input--phone" name="Телефон" placeholder="8 (960) 900-60-90" required>
-          </label>
-        </p>
+          <p class="form-unit__row">
+            <label class="form-unit__item">
+              <span class="form-unit__label">Телефон:*</span>
+              <input type="text" class="form-unit__input form-unit__input--icon
+                  form-unit__input--phone" name="Телефон" placeholder="8 (960) 900-60-90" required>
+            </label>
+          </p>
+        </div>
       </section>
       <section class="form-unit">
         <h3 class="form-unit__title theme__subtitle"><span>Комментарий</span></h3>
-        <p class="form-unit__row">
-          <label class="form-unit__item">
-          <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий"
-                    cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </label>
-        </p>
+        <div class="container">
+          <p class="form-unit__row">
+            <label class="form-unit__item">
+              <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий"
+                                cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
+          </p>
+        </div>
       </section>
       <section class="form-unit">
         <h3 class="form-unit__title theme__subtitle"><span>Дополнительно</span></h3>
-        <ul class="form-unit__list">
-          <li class="form-unit__list-item">
-            <label class="form-unit__item">
-              <input type="checkbox" name="sweetener" class="form-unit__checkbox visually-hidden" checked>
-              <span class="form-unit__label form-unit__label--checkbox">Сахарозаменитель</span>
-            </label>
-          </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item">
-              <input type="checkbox" name="water" class="form-unit__checkbox visually-hidden">
-              <span class="form-unit__label form-unit__label--checkbox">Питьевая вода</span>
-            </label>
-          </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item">
-              <input type="checkbox" name="milk" class="form-unit__checkbox visually-hidden">
-              <span class="form-unit__label form-unit__label--checkbox">Молоко</span>
-            </label>
-          </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item">
-              <input type="checkbox" name="vitamins" class="form-unit__checkbox visually-hidden">
-              <span class="form-unit__label form-unit__label--checkbox">Витамины</span>
-            </label>
-          </li>
-        </ul>
+        <div class="container">
+          <ul class="form-unit__list">
+            <li class="form-unit__list-item">
+              <label class="form-unit__item">
+                <input type="checkbox" name="sweetener" class="form-unit__checkbox visually-hidden" checked>
+                <span class="form-unit__label form-unit__label--checkbox">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item">
+                <input type="checkbox" name="water" class="form-unit__checkbox visually-hidden">
+                <span class="form-unit__label form-unit__label--checkbox">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item">
+                <input type="checkbox" name="milk" class="form-unit__checkbox visually-hidden">
+                <span class="form-unit__label form-unit__label--checkbox">Молоко</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item">
+                <input type="checkbox" name="vitamins" class="form-unit__checkbox visually-hidden">
+                <span class="form-unit__label form-unit__label--checkbox">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </div>
       </section>
       <footer class="program-form__footer container">
         <button class="theme__btn">Отправить заявку</button>

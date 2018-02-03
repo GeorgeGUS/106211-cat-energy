@@ -1,3 +1,7 @@
+.additional-goods {
+  padding-bottom: 20px;
+}
+
 .additional-goods__title {
   margin-top: 29px;
   margin-bottom: 28px;
@@ -10,10 +14,10 @@
 
 .additional-goods__item {
   padding-bottom: 17px;
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid $border-grey;
 
   &:first-child {
-    border-top: 1px solid #cdcdcd;
+    border-top: 1px solid $border-grey;
   }
 }
 
@@ -31,5 +35,5 @@
   justify-content: space-between;
   font-size: 14px;
   line-height: 1;
-  color: #444444;
+  color: $darkgrey;
 }

@@ -5,12 +5,32 @@ body {
   line-height: 1;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   margin: 0 auto;
-  min-width: 320px;
-  width: 320px;
+  min-width: $mobile-width;
+  width: $mobile-width;
   padding: 0 20px;
   box-sizing: border-box;
+
+  &--no-pad {
+    padding: 0;
+  }
+
+  @include tablet {
+    padding: 0 30px;
+    width: $tablet-width;
+  }
+
+  @include desktop {
+    padding: 0 40px;
+    width: $desktop-width;
+    max-width: $desktop-width;
+  }
 }
 
 .visually-hidden {

@@ -2,6 +2,7 @@
 $black: #111111;
 $darkgrey: #444444;
 $grey: #f2f2f2;
+$border-grey: #cdcdcd;
 $green: #68b738;
 
 //Fonts
@@ -10,6 +11,6 @@ $medium: "Oswald Medium", "Arial", sans-serif;
 $arial: "Arial", sans-serif;
 
 //Viewports
-$mobile: 320px;
-$tablet: 768px;
-$desktop: 1300px;
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1300px;

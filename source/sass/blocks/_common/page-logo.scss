@@ -1,6 +1,7 @@
 .page-logo {
   position: relative;
   display: flex;
+  align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   height: 45px;
@@ -15,8 +16,19 @@
   position: absolute;
   top: 11px;
   left: 0;
+
+  @include tablet {
+    position: initial;
+    margin-right: 15px;
+    width: 73px;
+    height: 57px;
+  }
 }
 
 .page-logo__title {
   margin: auto;
+
+  @include tablet {
+    width: 85px;
+  }
 }

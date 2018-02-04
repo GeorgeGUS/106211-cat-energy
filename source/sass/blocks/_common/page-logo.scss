@@ -9,6 +9,13 @@
   &--footer {
     padding-top: 29px;
     padding-bottom: 20px;
+
+    @include tablet {
+      .page-logo__title {
+        margin-right: 27px;
+        width: 128px;
+      }
+    }
   }
 }
 

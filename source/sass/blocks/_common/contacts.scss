@@ -6,6 +6,13 @@
   &--white {
     background-color: #ffffff;
   }
+
+  @include tablet {
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 70px 55px;
+    background-color: #ffffff;
+  }
 }
 
 .contacts__half {
@@ -15,14 +22,33 @@
 
 .contacts__greeting {
   text-transform: uppercase;
+
+  @include tablet {
+    width: 25%;
+    font-size: 20px;
+    line-height: 1.25;
+  }
 }
 
 .contacts__address {
-  font-family: $arial;
-  font-size: 14px;
+  line-height: 1.5;
+  @include tablet {
+    text-align: right;
+  }
+}
+
+.contacts__city {
+  @include tablet {
+    display: block;
+    margin-top: 1em;
+  }
 }
 
 .contacts__map {
   height: 362px;
   background-color: #fdf7ef;
+
+  @include tablet {
+    height: 400px;
+  }
 }

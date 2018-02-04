@@ -1,3 +1,9 @@
+.rights-owner {
+  @include tablet {
+    padding-top: 30px;
+  }
+}
+
 .rights-owner__link {
   display: flex;
   justify-content: space-between;
@@ -5,4 +11,10 @@
   font-family: "Arial", sans-serif;
   text-decoration: none;
   color: $darkgrey;
+}
+
+.rights-owner__logo {
+  @include tablet {
+    margin-left: 22px;
+  }
 }

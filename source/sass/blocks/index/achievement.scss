@@ -8,6 +8,10 @@
 
   & + & {
     margin-left: 32px;
+
+    @include tablet {
+      margin-left: 42px;
+    }
   }
 }
 
@@ -23,6 +27,18 @@
   color: $darkgrey;
   box-sizing: border-box;
   background-color: $grey;
+
+  @include tablet {
+    //margin-top: 2px;
+    padding: 0 6px;
+    //padding-top: 6px;
+    font-size: 14px;
+    background-color: #ffffff;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .achievement__value {
@@ -38,4 +54,11 @@
   border: 1px solid $border-grey;
   border-radius: 3px;
   box-sizing: border-box;
+
+  @include tablet {
+    padding-bottom: 20px;
+    min-width: 162px;
+    font-size: 30px;
+    line-height: 1.23;
+  }
 }

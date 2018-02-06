@@ -1,5 +1,14 @@
 .catalog {
-  //padding-top: 7px;
+  margin: 0 auto;
+}
+
+.catalog__list {
+  padding: 0;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__header {
@@ -7,10 +16,30 @@
 }
 
 .catalog__item {
+  display: flex;
+  flex-direction: column;
   padding: 0 20px 24px;
   border-top: 1px solid #ededed;
 
   &:last-child {
     border-bottom: 1px solid #ededed;
   }
+
+  @include tablet {
+    margin: 110px 30px 30px;
+    padding: 40px 38px;
+    width: 324px;
+    border-top: none;
+    box-sizing: border-box;
+    background-color: $grey;
+
+    &--more {
+      background-color: #ffffff;
+      border: 1px solid #ededed;
+    }
+  }
+}
+
+.catalog__btn {
+  //width: 100%;
 }

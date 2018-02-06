@@ -1,23 +1,51 @@
 .more-products {
   text-align: center;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   &::before {
     content: "";
     display: block;
     margin: 25px 0;
+    width: 30px;
     height: 30px;
     background: url("../img/icon-plus-mobile.svg") no-repeat center;
     opacity: 0.2;
+
+    @include tablet {
+      margin: 15px 0 17px;
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
 .more-products__title {
-  margin-bottom: 10px;
+  font-weight: 300;
+  padding-bottom: 6px;
   text-transform: uppercase;
+
+  @include tablet {
+    margin: 30px auto 20px;
+    width: 60%;
+    font-size: 20px;
+  }
 }
 
 .more-products__text {
   margin-top: 0;
   margin-bottom: 20px;
   font-size: 12px;
+
+  @include tablet {
+    width: 170px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.more-products__btn {
+  margin-top: auto;
 }

@@ -11,6 +11,8 @@
     padding-bottom: 20px;
 
     @include tablet {
+      padding: 0;
+
       .page-logo__title {
         margin-right: 27px;
         width: 128px;

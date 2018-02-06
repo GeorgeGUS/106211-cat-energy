@@ -1,6 +1,8 @@
 .contacts__text-box {
+  position: relative;
   display: flex;
-  padding: 27px 20px;
+  padding: 27px 20px 24px;
+  margin-bottom: -38px;
   line-height: 20px;
 
   &--white {
@@ -10,7 +12,8 @@
   @include tablet {
     justify-content: space-between;
     align-items: center;
-    padding: 70px 70px 55px;
+    padding: 60px 70px 55px;
+    margin-bottom: -4px;
     background-color: #ffffff;
   }
 }
@@ -45,10 +48,10 @@
 }
 
 .contacts__map {
-  height: 362px;
+  height: 400px;
   background-color: #fdf7ef;
 
-  @include tablet {
-    height: 400px;
-  }
+  //@include tablet {
+  //  height: 396px;
+  //}
 }

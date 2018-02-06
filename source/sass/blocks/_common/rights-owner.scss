@@ -1,6 +1,6 @@
 .rights-owner {
   @include tablet {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 }
 
@@ -14,6 +14,9 @@
 }
 
 .rights-owner__logo {
+  width: 27px;
+  height: 34px;
+
   @include tablet {
     margin-left: 22px;
   }

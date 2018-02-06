@@ -36,10 +36,12 @@
   <body>
 
   <header class="page-header container">
+
     <a class="page-logo" href="index.html">
       <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
       <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
     </a>
+
     <nav class="page-nav">
       <button class="page-nav__toggle" type="button">Показать меню</button>
       <ul class="page-nav__list">
@@ -48,10 +50,12 @@
         <li class="page-nav__item"><a class="page-nav__link">Подбор программы</a></li>
       </ul>
     </nav>
+
   </header>
 
   <main class="theme">
     <h1 class="visually-hidden">Cat Energy</h1>
+
     <form class="program-form" action="http://echo.htmlacademy.ru" method="post">
       <div class="container">
         <h2 class="theme__title theme__title--top">Подбор программы</h2>
@@ -59,8 +63,10 @@
           Заполните анкету и мы подберем <br> программу питания для вашего кота
         </p>
       </div>
+
       <div class="container">
         <section class="form-unit form-unit--no-title">
+          <h3 class="visually-hidden">Введите личные данные кота</h3>
           <p class="form-unit__row">
             <label class="form-unit__item">
               <span class="form-unit__label">Имя:*</span>
@@ -80,7 +86,9 @@
             </label>
           </p>
         </section>
+
         <section class="form-unit form-unit--bordered">
+          <h3 class="visually-hidden">Выберите программу</h3>
           <ul class="form-unit__list">
             <li class="form-unit__list-item">
               <label class="form-unit__item">
@@ -103,6 +111,7 @@
           </ul>
         </section>
       </div>
+
       <section class="form-unit">
         <h3 class="form-unit__title theme__subtitle"><span>Контактные данные <br> (владельца кота)</span></h3>
         <div class="container">
@@ -122,6 +131,7 @@
           </p>
         </div>
       </section>
+
       <section class="form-unit">
         <h3 class="form-unit__title theme__subtitle"><span>Комментарий</span></h3>
         <div class="container">
@@ -133,6 +143,7 @@
           </p>
         </div>
       </section>
+
       <section class="form-unit">
         <h3 class="form-unit__title theme__subtitle"><span>Дополнительно</span></h3>
         <div class="container">
@@ -164,6 +175,7 @@
           </ul>
         </div>
       </section>
+
       <footer class="program-form__footer container">
         <button class="theme__btn">Отправить заявку</button>
         <p class="program-form__footnote theme__text"><sup>*</sup> — Обязательные поля</p>
@@ -177,14 +189,15 @@
         <p class="contacts__half contacts__greeting">
           Приглашаем <br> к сотрудничеству дилеров!
         </p>
-        <p class="contacts__half contacts__address">
-          ул. Большая <br> Конюшенная, д. 19/8 Санкт-Петербург
+        <p class="contacts__half contacts__address theme__text">
+          ул. Большая <br> Конюшенная, д. 19/8
+          <span class="contacts__city">Санкт-Петербург</span>
         </p>
       </div>
       <div class="contacts__map"></div>
     </div>
 
-    <div class="container">
+    <div class="page-footer__bottom container">
       <div class="page-footer__item page-logo page-logo--footer">
         <a href="index.html" class="page-logo__title">
           <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
@@ -208,7 +221,7 @@
         <h2 class="visually-hidden">Правообладатель</h2>
         <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <svg class="rights-owner__logo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09" fill="#666">
+          <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09" fill="#666">
             <path d="M13.62.02L13.47 0 0 1.41v24.66l13.47 8.02L26.9 26.1l.04-.03V1.41L13.62.01zm11.4 12.1L13.49 5.34v-.1l-.08.05-.1-.06v.11L1.94 12.12V3.15l11.54-1.21 11.55 1.2v8.99zM13.4 6.8l11.52 6.71-4.48 2.64-7.09-4.22-.01 1.41 5.9 3.52-.86.5-5.03-2.99-.01 1.42 3.82 2.27-.78.52-3.03-1.78-.01 1.41 1.85 1.1-1.8 1.07-11.36-6.75L13.41 6.8zM1.93 15.13l11.4 6.79.02 1.04-7.94-4.73-.02 1.42 7.98 4.8.02 1.07-7.97-4.74-.01 1.42 8.02 4.82.04.02 8.14-4.87V17l3.4-2.03v10.02l-11.54 6.87-11.54-6.87v-9.85z"/>
           </svg>
         </a>

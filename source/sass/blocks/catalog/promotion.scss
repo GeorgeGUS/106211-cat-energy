@@ -38,10 +38,8 @@
 
   @include tablet {
     flex-grow: 0;
-    //margin-left: 125px;
-    width: 285px;
-
     padding-bottom: 0;
+    width: 285px;
     text-align: left;
   }
 }

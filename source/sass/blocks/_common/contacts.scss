@@ -14,7 +14,11 @@
     align-items: center;
     padding: 60px 70px 55px;
     margin-bottom: -4px;
-    background-color: #ffffff;
+    //background-color: #ffffff;
+
+    &--white {
+      background-color: #ffffff;
+    }
   }
 }
 
@@ -24,11 +28,9 @@
 }
 
 .contacts__greeting {
-  text-transform: uppercase;
 
   @include tablet {
     width: 25%;
-    font-size: 20px;
     line-height: 1.25;
   }
 }

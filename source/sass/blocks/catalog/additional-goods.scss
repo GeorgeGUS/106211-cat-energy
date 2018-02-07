@@ -48,15 +48,10 @@
 
 .additional-goods__name {
   margin: 13px 0;
-  font-size: 16px;
   line-height: 1;
-  text-transform: uppercase;
-  color: #222222;
 
   @include tablet {
     margin: 10px 0 10px;
-    font-size: 20px;
-    font-weight: 300;
   }
 }
 

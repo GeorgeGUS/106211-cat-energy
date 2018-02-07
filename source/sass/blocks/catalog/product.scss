@@ -42,7 +42,7 @@
 
 .product__name {
   width: 60%;
-  font-weight: 300;
+  padding-bottom: 10px;
 
   @include tablet {
     margin: 0 auto;

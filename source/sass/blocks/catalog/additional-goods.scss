@@ -1,5 +1,9 @@
 .additional-goods {
-  padding: 0 0 20px;
+  padding: 0 0 35px;
+
+  @include tablet {
+    padding-bottom: 75px;
+  }
 }
 
 .additional-goods__title {
@@ -15,30 +19,68 @@
 .additional-goods__list {
   @include reset-list;
   padding-top: 5px;
+  margin-bottom: 39px;
+
+  @include tablet {
+    margin-bottom: 69px;
+  }
 }
 
 .additional-goods__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 17px;
   border-bottom: 1px solid $border-grey;
 
   &:first-child {
     border-top: 1px solid $border-grey;
   }
+
+  @include tablet {
+    padding: 16px 36px 12px;
+    border-left: 1px solid $border-grey;
+    border-right: 1px solid $border-grey;
+    align-content: center;
+    align-items: center;
+  }
 }
 
 .additional-goods__name {
-  margin-top: 13px;
-  margin-bottom: 10px;
+  margin: 13px 0;
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
   color: #222222;
+
+  @include tablet {
+    margin: 10px 0 10px;
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
 
 .additional-goods__details {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  line-height: 1;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 11px;
   color: $darkgrey;
+
+  @include tablet {
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.additional-goods__price {
+  min-width: 95px;
+  text-align: right;
+}
+
+.additional-goods__btn {
+  @include tablet {
+    margin: 15px 0;
+  }
 }

@@ -46,8 +46,7 @@
   }
 
   @include tablet {
-    width: $tablet-width;
-    padding: 0 calc((100vw - #{$tablet-width} + 36px) / 2);
+    padding: 0 calc((100vw - 708px) / 2);
     font-size: 36px;
     background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $green 22px, $green 25px, transparent 25px, transparent 100%);
 

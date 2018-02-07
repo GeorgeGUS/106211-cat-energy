@@ -1,24 +1,47 @@
 .promotion {
-  margin-top: 39px;
-  margin-bottom: 15px;
-  padding-top: 65px;
-  padding-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center;
+  background-size: cover;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &::before {
+    flex-grow: 1;
     content: "";
-    margin: 0 auto 65px;
+    margin: 65px 0;
     display: block;
-    width: 55px;
+    width: 240px;
     height: 60px;
     background: url("../img/icon-gift.svg") no-repeat center;
+
+    @include tablet {
+      flex-grow: 0;
+      margin-bottom: 75px;
+    }
   }
 }
 
 .promotion__text {
+  flex-grow: 1;
   margin: 0;
+  padding-bottom: 45px;
   text-align: center;
   font-family: $arial;
   line-height: 18px;
+
   color: #ffffff;
+
+  @include tablet {
+    flex-grow: 0;
+    //margin-left: 125px;
+    width: 285px;
+
+    padding-bottom: 0;
+    text-align: left;
+  }
 }

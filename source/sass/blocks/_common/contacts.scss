@@ -1,3 +1,13 @@
+.contacts {
+  @include desktop {
+    position: relative;
+    padding-left: calc((100vw - #{$desktop-width}) / 2 + #{$desktop-pads  });
+    display: flex;
+    align-items: center;
+    height: 400px;
+  }
+}
+
 .contacts__text-box {
   position: relative;
   display: flex;
@@ -14,24 +24,37 @@
     align-items: center;
     padding: 60px 70px 55px;
     margin-bottom: -4px;
-    //background-color: #ffffff;
 
     &--white {
       background-color: #ffffff;
     }
+  }
+
+  @include desktop {
+    margin-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 85px;
+    z-index: 1;
+    background-color: #ffffff;
   }
 }
 
 .contacts__half {
   margin: 0;
   width: 50%;
+
+  @include tablet {
+    width: 160px;
+  }
 }
 
 .contacts__greeting {
-
   @include tablet {
-    width: 25%;
     line-height: 1.25;
+  }
+
+  @include desktop {
+    margin-right: 90px;
   }
 }
 
@@ -40,6 +63,12 @@
 
   @include tablet {
     text-align: right;
+  }
+
+  @include desktop {
+    text-align: left;
+    line-height: 1.4;
+    margin-bottom: 5px;
   }
 }
 
@@ -53,4 +82,10 @@
 .contacts__map {
   height: 400px;
   background-color: #fdf7ef;
+
+  @include desktop {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
 }

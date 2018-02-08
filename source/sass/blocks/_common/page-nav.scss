@@ -23,6 +23,11 @@
     display: flex;
     margin: 0 -18px;
   }
+
+  @include desktop {
+    width: 570px;
+    justify-content: flex-end;
+  }
 }
 
 .page-nav__item {
@@ -53,9 +58,30 @@
   color: $black;
 
   @include tablet {
-    padding: 10px 18px;
+    margin: 0 18px;
+    padding: 10px 0;
     font-family: $regular;
     font-size: 18px;
-    line-height: 1.38px;
+    line-height: 1.38;
+
+    &--active {
+      border-bottom: 2px solid $green;
+    }
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.24;
+  }
+}
+
+
+@include desktop {
+  .page-nav__list--index .page-nav__link {
+    color: #ffffff;
+
+    &--active {
+      border-bottom-color: #ffffff;
+    }
   }
 }

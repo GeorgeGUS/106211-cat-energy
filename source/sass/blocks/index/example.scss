@@ -6,6 +6,33 @@
     background-color: #ffffff;
     padding-bottom: 35px;
   }
+
+  @include desktop {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
+  }
+}
+
+.example__wrapper {
+  @include desktop {
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.example__content {
+  @include desktop {
+    width: 435px;
+  }
+}
+
+.example__title {
+  @include desktop {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
 }
 
 .example__text {
@@ -16,6 +43,11 @@
     margin-top: 30px;
     margin-bottom: 40px;
   }
+
+  @include desktop {
+    padding: 70px 0 60px;
+    margin-bottom: 0;
+  }
 }
 
 .example__row {
@@ -24,12 +56,22 @@
     justify-content: space-between;
     margin-bottom: 50px;
   }
+
+  @include desktop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .example__achievements {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+
+  @include desktop {
+
+    justify-content: flex-start;
+  }
 }
 
 .example__total {
@@ -47,10 +89,20 @@
     line-height: 1.5;
     text-align: right;
   }
+
+  @include desktop {
+    margin-top: 30px;
+    text-align: left;
+  }
 }
 
 .example__total-amount {
   @include tablet {
     display: block;
+  }
+
+  @include desktop {
+    display: inline-block;
+    margin-left: 60px;
   }
 }

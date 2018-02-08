@@ -12,6 +12,10 @@
     @include tablet {
       margin-left: 42px;
     }
+
+    @include desktop {
+      flex-grow: 0;
+    }
   }
 }
 
@@ -29,9 +33,7 @@
   background-color: $grey;
 
   @include tablet {
-    //margin-top: 2px;
     padding: 0 6px;
-    //padding-top: 6px;
     font-size: 14px;
     background-color: #ffffff;
 
@@ -39,13 +41,16 @@
       display: none;
     }
   }
+
+  @include desktop {
+    background-color: $grey;
+  }
 }
 
 .achievement__value {
   margin: 0;
   padding: 15px 20px;
   min-width: 124px;
-  width: 100%;
   font-size: 24px;
   font-weight: bold;
   text-align: center;

@@ -1,30 +1,93 @@
 .slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 34px;
+
+  @include desktop {
+    padding-bottom: 74px;
+  }
 }
 
 .slider__images {
   position: relative;
+  margin: 0 -20px;
+  width: 320px;
   height: 240px;
 
   @include tablet {
+    margin: 10px 0 0;
+    width: 680px;
     height: 517px;
+  }
+
+  @include desktop {
+    width: 650px;
   }
 }
 
 .slider__image {
-  display: none;
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 
-  &--active {
-    display: block;
+  &--after {
+    width: 0;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    &--after {
+      right: 0;
+      align-items: flex-end;
+      box-shadow:
+        240px 95px 0 -95px #eaeaea,
+        340px 95px 0 -95px #eaeaea;
+
+      img {
+        z-index: 1;
+      }
+      background-image: linear-gradient(#ffffff 0, #ffffff 190px, #eaeaea 190px, #eaeaea 100%);
+    }
+  }
+
+  @include desktop {
+    &--before {
+      left: -40px;
+      width: 750px;
+    }
+
+    &--after {
+      box-shadow: 400px 590px 0 400px #eaeaea;
+    }
+  }
+
+  img {
+    max-width: inherit;
+
+    @include tablet {
+      width: 680px;
+      height: 517px;
+    }
+
+    @include desktop {
+      width: 690px;
+    }
   }
 }
 
-input[type="radio"]:checked + .slider__image {
-  display: block;
+.slider__before:checked ~ .slider__images .slider__image--before,
+.slider__after:checked ~ .slider__images .slider__image--after {
+  width: 100%;
+}
+
+.slider__before:checked ~ .slider__images .slider__image--after,
+.slider__after:checked ~ .slider__images .slider__image--before {
+  width: 0;
 }
 
 .slider__actions {
@@ -33,6 +96,14 @@ input[type="radio"]:checked + .slider__image {
   align-items: center;
   margin-top: 30px;
   padding: 2px;
+
+  @include tablet {
+    margin-top: 20px;
+  }
+
+  @include desktop {
+    margin-top: 40px;
+  }
 }
 
 .slider__btn {
@@ -42,6 +113,7 @@ input[type="radio"]:checked + .slider__image {
   text-transform: uppercase;
   color: $black;
   cursor: pointer;
+  z-index: 1;
 
   @include tablet {
     width: 92px;

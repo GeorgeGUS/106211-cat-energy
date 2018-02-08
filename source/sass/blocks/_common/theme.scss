@@ -21,6 +21,12 @@
     padding: 35px 0;
     font-size: 60px;
   }
+
+  @include desktop {
+    &--top {
+      padding-top: 50px;
+    }
+  }
 }
 
 .theme__block-title {

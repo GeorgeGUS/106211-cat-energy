@@ -2,6 +2,10 @@
   @include tablet {
     padding-top: 20px;
   }
+
+  @include desktop {
+    padding-top: 0;
+  }
 }
 
 .rights-owner__link {

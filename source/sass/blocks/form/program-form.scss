@@ -14,6 +14,10 @@
     padding-left: 40px;
     line-height: 1.5;
   }
+
+  @include desktop {
+    padding-left: 0;
+  }
 }
 
 .program-form__footer {

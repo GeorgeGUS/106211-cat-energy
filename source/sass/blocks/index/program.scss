@@ -1,3 +1,16 @@
+.program {
+  @include desktop {
+    padding-top: 40px;
+  }
+}
+
+.program__wrapper {
+  @include desktop {
+    padding: 0;
+    display: flex;
+  }
+}
+
 .program__item {
   margin-bottom: 20px;
   padding: 20px 20px 0;
@@ -14,6 +27,16 @@
 
     &--pro {
       padding-right: 315px;
+    }
+  }
+
+  @include desktop {
+    width: 570px;
+    margin: 40px;
+    padding: 25px 50px;
+
+    &:last-child {
+      margin-bottom: 40px;
     }
   }
 }
@@ -74,6 +97,15 @@
     width: 200px;
     height: 200px;
   }
+
+  @include desktop {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-right: 60px;
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .program__description {
@@ -84,6 +116,11 @@
     margin-bottom: 35px;
     font-size: 16px;
     line-height: 1.5;
+  }
+
+  @include desktop {
+    margin-top: 18px;
+    margin-bottom: 18px;
   }
 }
 
@@ -115,5 +152,10 @@
     &::after {
       margin-left: 25px;
     }
+  }
+
+  @include desktop {
+    padding: 11px 0;
+    margin-bottom: 27px;
   }
 }

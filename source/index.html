@@ -22,7 +22,7 @@
         }
       }
       /* Desktop */
-      @media ( min-width: 1440px ) {
+      @media ( min-width: 1300px ) {
         HTML {
           /* Desktop layout */
           background-image: url( "layouts/cat-energy-index-desktop.jpg" );
@@ -35,23 +35,21 @@
   </head>
   <body>
 
-  <header class="page-header container">
-    <a class="page-logo">
-      <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
-      <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
-    </a>
-    <nav class="page-nav">
-      <button class="page-nav__toggle" type="button">Показать меню</button>
-      <ul class="page-nav__list">
-        <li class="page-nav__item"><a class="page-nav__link">Главная</a></li>
-        <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
-        <li class="page-nav__item"><a class="page-nav__link" href="form.html">Подбор программы</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="theme">
-    <h1 class="visually-hidden">Cat Energy</h1>
+  <header class="page-header page-header--index">
+    <div class="page-header__wrapper container">
+      <a class="page-logo">
+        <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+        <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+      </a>
+      <nav class="page-nav">
+        <button class="page-nav__toggle" type="button">Показать меню</button>
+        <ul class="page-nav__list page-nav__list--index">
+          <li class="page-nav__item"><a class="page-nav__link page-nav__link--active">Главная</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
     <section class="intro">
       <div class="intro__wrapper container">
         <h2 class="intro__title theme__title theme__title--top">
@@ -66,10 +64,14 @@
         </a>
       </div>
     </section>
+  </header>
+
+  <main class="theme">
+    <h1 class="visually-hidden">Cat Energy</h1>
 
     <section class="program">
       <h2 class="visually-hidden">Программы тренировок</h2>
-      <div class="container">
+      <div class="program__wrapper container">
         <article class="program__item program__item--slim">
           <h3 class="program__title">
             <span class="program__icon program__icon--slim"></span>
@@ -121,33 +123,41 @@
       </div>
     </section>
     <section class="example">
-      <div class="container">
-        <h2 class="theme__title">Живой пример</h2>
-        <p class="example__text theme__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="example__row">
-          <div class="example__achievements">
-            <dl class="achievement">
-              <dt class="achievement__title">Снижение<br> веса</dt>
-              <dd class="achievement__value">5 кг</dd>
-            </dl>
-            <dl class="achievement">
-              <dt class="achievement__title">Затрачено<br> времени</dt>
-              <dd class="achievement__value">60 дней</dd>
-            </dl>
-          </div>
-          <p class="example__total">
-            Затраты на питание:
-            <span class="example__total-amount">15 000 руб.</span>
+      <div class="example__wrapper container">
+        <div class="example__content">
+          <h2 class="example__title theme__title">Живой пример</h2>
+          <p class="example__text theme__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
+          <div class="example__row">
+            <div class="example__achievements">
+              <dl class="achievement">
+                <dt class="achievement__title">Снижение<br> веса</dt>
+                <dd class="achievement__value">5 кг</dd>
+              </dl>
+              <dl class="achievement">
+                <dt class="achievement__title">Затрачено<br> времени</dt>
+                <dd class="achievement__value">60 дней</dd>
+              </dl>
+            </div>
+            <p class="example__total">
+              Затраты на питание:
+              <span class="example__total-amount">15 000 руб.</span>
+            </p>
+          </div>
         </div>
-        <div class="example__comparison slider">
-          <div class="slider__images full-width">
-            <input type="radio" id="before" class="visually-hidden" name="image-toggle" checked>
-            <img class="slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
-            <input type="radio" id="after" class="visually-hidden" name="image-toggle">
-            <img class="slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Худой кот">
+        <div class="slider">
+          <input type="radio" id="before" class="slider__before visually-hidden" name="image-toggle">
+          <input type="radio" id="after" class="slider__after visually-hidden" name="image-toggle">
+
+          <div class="slider__images">
+            <div class="slider__image slider__image--before">
+              <img src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
+            </div>
+            <div class="slider__image slider__image--after">
+              <img src="img/after-mobile@1x.png" width="320" height="240" alt="Худой кот">
+            </div>
           </div>
           <div class="slider__actions">
             <label for="before" class="slider__btn">Было</label>

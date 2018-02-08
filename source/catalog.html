@@ -22,7 +22,7 @@
         }
       }
       /* Desktop */
-      @media ( min-width: 1440px ) {
+      @media ( min-width: 1300px ) {
         HTML {
           /* Desktop layout */
           background-image: url( "layouts/cat-energy-catalog-desktop.jpg" );
@@ -35,19 +35,21 @@
   </head>
   <body>
 
-  <header class="page-header container">
-    <a class="page-logo" href="index.html">
-      <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
-      <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
-    </a>
-    <nav class="page-nav">
-      <button class="page-nav__toggle" type="button">Показать меню</button>
-      <ul class="page-nav__list">
-        <li class="page-nav__item"><a class="page-nav__link" href="index.html">Главная</a></li>
-        <li class="page-nav__item"><a class="page-nav__link">Каталог продукции</a></li>
-        <li class="page-nav__item"><a class="page-nav__link" href="form.html">Подбор программы</a></li>
-      </ul>
-    </nav>
+  <header class="page-header">
+    <div class="page-header__wrapper container">
+      <a class="page-logo" href="index.html">
+        <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+        <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+      </a>
+      <nav class="page-nav">
+        <button class="page-nav__toggle" type="button">Показать меню</button>
+        <ul class="page-nav__list">
+          <li class="page-nav__item"><a class="page-nav__link" href="index.html">Главная</a></li>
+          <li class="page-nav__item"><a class="page-nav__link page-nav__link--active">Каталог продукции</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main class="theme">

@@ -1,4 +1,27 @@
 .page-header {
   position: relative;
   background-color: #ffffff;
+
+  @include desktop {
+    &--index {
+      background:
+        url("../img/index-background-mobile@1x.jpg") no-repeat calc((100vw - 1440px) / 2 + 760px),
+        linear-gradient(to left, #63a73a 0, #63a73a calc((100vw - 1440px) / 2 + 680px), #ffffff  calc((100vw - 1440px) / 2 + 680px), #ffffff 100%);
+      background-size: contain;
+    }
+  }
+}
+
+.page-header__wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include desktop {
+    padding-top: 52px;
+  }
 }

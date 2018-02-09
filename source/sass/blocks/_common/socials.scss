@@ -1,7 +1,10 @@
 .socials {
-
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
+
+  @include tablet {
+    border: none;
+  }
 }
 
 .socials__list {
@@ -13,6 +16,10 @@
 
 .socials__item {
   margin: 0 17px;
+
+  @include tablet {
+    margin: 0 10px;
+  }
 }
 
 .socials__link {
@@ -23,8 +30,18 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @include tablet {
+    width: 28px;
+    height: 28px;
+  }
+
   &--vk {
     background-image: url("../img/icon-vk-mobile.svg");
+
+    @include tablet {
+      width: 30px;
+      margin-right: 7px;
+    }
   }
 
   &--ig {

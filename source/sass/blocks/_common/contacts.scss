@@ -1,9 +1,38 @@
+.contacts {
+  @include desktop {
+    position: relative;
+    padding-left: calc((100vw - #{$desktop-width}) / 2 + #{$desktop-pads  });
+    display: flex;
+    align-items: center;
+    height: 400px;
+  }
+}
+
 .contacts__text-box {
+  position: relative;
   display: flex;
-  padding: 27px 20px;
+  padding: 26px 20px 25px;
   line-height: 20px;
 
   &--white {
+    background-color: #ffffff;
+  }
+
+  @include tablet {
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 70px 55px;
+
+    &--white {
+      background-color: #ffffff;
+    }
+  }
+
+  @include desktop {
+    margin-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 85px;
+    z-index: 1;
     background-color: #ffffff;
   }
 }
@@ -11,18 +40,54 @@
 .contacts__half {
   margin: 0;
   width: 50%;
+
+  @include tablet {
+    width: 160px;
+  }
 }
 
 .contacts__greeting {
-  text-transform: uppercase;
+  @include tablet {
+    line-height: 1.25;
+  }
+
+  @include desktop {
+    margin-right: 90px;
+  }
 }
 
 .contacts__address {
-  font-family: $arial;
-  font-size: 14px;
+  line-height: 1.5;
+
+  @include tablet {
+    text-align: right;
+  }
+
+  @include desktop {
+    text-align: left;
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+}
+
+.contacts__city {
+  @include tablet {
+    display: block;
+    margin-top: 1em;
+  }
 }
 
 .contacts__map {
   height: 362px;
   background-color: #fdf7ef;
+
+  @include tablet {
+    height: 394px;
+  }
+
+  @include desktop {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
 }

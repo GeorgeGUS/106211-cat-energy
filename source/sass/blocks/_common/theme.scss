@@ -9,20 +9,36 @@
 }
 
 .theme__title {
-  padding-bottom: 20px;
+  padding: 20px 0;
   font-size: 36px;
   font-weight: normal;
 
   &--top {
-    line-height: 40px;
+    padding-top: 27px;
+  }
+
+  @include tablet {
+    padding: 35px 0;
+    font-size: 60px;
+  }
+
+  @include desktop {
+    &--top {
+      padding-top: 50px;
+    }
   }
 }
 
 .theme__block-title {
-  padding-bottom: 10px;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 300;
   text-transform: uppercase;
+  color: #222222;
+
+  @include tablet {
+    font-size: 20px;
+  }
 }
 
 .theme__subtitle {
@@ -39,12 +55,35 @@
     padding: 0 20px;
     background-color: #ffffff;
   }
+
+  @include tablet {
+    padding: 0 calc((100vw - 708px) / 2);
+    font-size: 36px;
+    background-image: linear-gradient(to bottom, transparent 0, transparent 22px, $green 22px, $green 25px, transparent 25px, transparent 100%);
+
+    br {
+      display: none;
+    }
+
+    span {
+      padding: 0 36px;
+    }
+  }
+
+  @include desktop {
+    padding: 0 calc((100vw - 1300px) / 2);
+  }
 }
 
 .theme__text {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
 .theme__btn {

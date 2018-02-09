@@ -8,12 +8,27 @@
   background: transparent url("../img/icon-close.svg") no-repeat center;
   border: none;
   cursor: pointer;
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .page-nav__list {
   margin: 0 -20px;
   padding: 0;
   list-style: none;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -18px;
+  }
+
+  @include desktop {
+    width: 570px;
+    justify-content: flex-end;
+  }
 }
 
 .page-nav__item {
@@ -21,6 +36,14 @@
 
   &:last-child {
     border-bottom: 1px solid #e6e6e6;
+  }
+
+  @include tablet {
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
@@ -34,4 +57,32 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $black;
+
+  @include tablet {
+    margin: 0 18px;
+    padding: 10px 0;
+    font-family: $regular;
+    font-size: 18px;
+    line-height: 1.38;
+
+    &--active {
+      border-bottom: 2px solid $green;
+    }
+  }
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.24;
+  }
+}
+
+
+@include desktop {
+  .page-nav__list--index .page-nav__link {
+    color: #ffffff;
+
+    &--active {
+      border-bottom-color: #ffffff;
+    }
+  }
 }

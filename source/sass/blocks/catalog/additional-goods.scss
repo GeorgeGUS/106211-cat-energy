@@ -1,35 +1,125 @@
+.additional-goods {
+  padding: 0 0 35px;
+
+  @include tablet {
+    padding-bottom: 75px;
+  }
+
+  @include desktop {
+    padding-bottom: 85px;
+  }
+}
+
+.additional-goods__wrapper {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .additional-goods__title {
   margin-top: 29px;
-  margin-bottom: 28px;
+  margin-bottom: 33px;
+
+  @include tablet {
+    margin-top: 37px;
+    margin-bottom: 80px;
+  }
+
+  @include desktop {
+    margin-top: 45px;
+  }
 }
 
 .additional-goods__list {
   @include reset-list;
-  padding-top: 5px;
+  margin-bottom: 39px;
+
+  @include tablet {
+    margin-bottom: 69px;
+  }
+
+  @include desktop {
+    margin-bottom: 0;
+  }
 }
 
 .additional-goods__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 17px;
-  border-bottom: 1px solid #cdcdcd;
+  border-bottom: 1px solid $border-grey;
 
   &:first-child {
-    border-top: 1px solid #cdcdcd;
+    border-top: 1px solid $border-grey;
+  }
+
+  @include tablet {
+    padding: 16px 36px 12px;
+    border-left: 1px solid $border-grey;
+    border-right: 1px solid $border-grey;
+    align-content: center;
+    align-items: center;
+  }
+
+  @include desktop {
+    padding: 15px 0 16px;
+    border-left: 0;
+    border-right: 0;
   }
 }
 
 .additional-goods__name {
-  margin-top: 13px;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin: 13px 0;
   line-height: 1;
-  text-transform: uppercase;
-  color: #222222;
+
+  @include tablet {
+    margin: 10px 0 10px;
+  }
+
+  @include desktop {
+    width: 325px;
+  }
 }
 
 .additional-goods__details {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  line-height: 1;
-  color: #444444;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 11px;
+  color: $darkgrey;
+
+  @include tablet {
+    width: auto;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    width: 325px;
+  }
+}
+
+.additional-goods__price {
+  flex-shrink: 0;
+  width: 95px;
+  text-align: right;
+
+  @include desktop {
+    text-align: left;
+    width: 80px;
+  }
+}
+
+.additional-goods__btn {
+  @include tablet {
+    margin: 15px 0;
+  }
+
+  @include desktop {
+    margin: 0;
+    width: 245px;
+  }
 }

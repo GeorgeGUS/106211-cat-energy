@@ -22,7 +22,7 @@
         }
       }
       /* Desktop */
-      @media ( min-width: 1440px ) {
+      @media ( min-width: 1300px ) {
         HTML {
           /* Desktop layout */
           background-image: url( "layouts/cat-energy-index-desktop.jpg" );
@@ -35,26 +35,24 @@
   </head>
   <body>
 
-  <header class="page-header container">
-    <a class="page-logo">
-      <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
-      <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
-    </a>
-    <nav class="page-nav">
-      <button class="page-nav__toggle" type="button">Показать меню</button>
-      <ul class="page-nav__list">
-        <li class="page-nav__item"><a class="page-nav__link">Главная</a></li>
-        <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
-        <li class="page-nav__item"><a class="page-nav__link" href="form.html">Подбор программы</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="theme">
-    <h1 class="visually-hidden">Cat Energy</h1>
+  <header class="page-header page-header--index">
+    <div class="page-header__wrapper container">
+      <a class="page-logo">
+        <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+        <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+      </a>
+      <nav class="page-nav">
+        <button class="page-nav__toggle" type="button">Показать меню</button>
+        <ul class="page-nav__list page-nav__list--index">
+          <li class="page-nav__item"><a class="page-nav__link page-nav__link--active">Главная</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="form.html">Подбор программы</a></li>
+        </ul>
+      </nav>
+    </div>
     <section class="intro">
       <div class="intro__wrapper container">
-        <h2 class="intro__title theme__title">
+        <h2 class="intro__title theme__title theme__title--top">
           Функциональное<br> питание для котов
         </h2>
         <p class="intro__text">
@@ -66,11 +64,15 @@
         </a>
       </div>
     </section>
+  </header>
+
+  <main class="theme">
+    <h1 class="visually-hidden">Cat Energy</h1>
 
     <section class="program">
       <h2 class="visually-hidden">Программы тренировок</h2>
-      <div class="container">
-        <article class="program__item">
+      <div class="program__wrapper container">
+        <article class="program__item program__item--slim">
           <h3 class="program__title">
             <span class="program__icon program__icon--slim"></span>
             Похудение
@@ -80,7 +82,7 @@
           </p>
           <a href="catalog.html" class="program__link">Каталог Slim</a>
         </article>
-        <article class="program__item">
+        <article class="program__item program__item--pro">
           <h3 class="program__title">
             <span class="program__icon program__icon--pro"></span>
             Набор массы
@@ -114,37 +116,48 @@
           </li>
           <li class="feature__item feature__item--clock">
             <p class="feature__text theme__text">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+              Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!
             </p>
           </li>
         </ul>
       </div>
     </section>
     <section class="example">
-      <div class="container">
-        <h2 class="theme__title">Живой пример</h2>
-        <p class="example__text theme__text">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-        </p>
-        <div class="example__achievements">
-          <dl class="achievement">
-            <dt class="achievement__title">Снижение<br>  веса</dt>
-            <dd class="achievement__value">5 кг</dd>
-          </dl>
-          <dl class="achievement">
-            <dt class="achievement__title">Затрачено<br> времени</dt>
-            <dd class="achievement__value">60 дней</dd>
-          </dl>
+      <div class="example__wrapper container">
+        <div class="example__content">
+          <h2 class="example__title theme__title">Живой пример</h2>
+          <p class="example__text theme__text">
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без
+            изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+          </p>
+          <div class="example__row">
+            <div class="example__achievements">
+              <dl class="achievement">
+                <dt class="achievement__title">Снижение<br> веса</dt>
+                <dd class="achievement__value">5 кг</dd>
+              </dl>
+              <dl class="achievement">
+                <dt class="achievement__title">Затрачено<br> времени</dt>
+                <dd class="achievement__value">60 дней</dd>
+              </dl>
+            </div>
+            <p class="example__total">
+              Затраты на питание:
+              <span class="example__total-amount">15 000 руб.</span>
+            </p>
+          </div>
         </div>
-        <p class="example__total-amount">
-          Затраты на питание: 15 000 руб.
-        </p>
-        <div class="example__comparison slider">
-          <div class="slider__images full-width">
-            <input type="radio" id="before" class="visually-hidden" name="image-toggle" checked>
-            <img class="slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
-            <input type="radio" id="after" class="visually-hidden" name="image-toggle">
-            <img class="slider__image" src="img/after-mobile@1x.png" width="320" height="240" alt="Худой кот">
+        <div class="slider">
+          <input type="radio" id="before" class="slider__before visually-hidden" name="image-toggle">
+          <input type="radio" id="after" class="slider__after visually-hidden" name="image-toggle">
+
+          <div class="slider__images">
+            <div class="slider__image slider__image--before">
+              <img src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
+            </div>
+            <div class="slider__image slider__image--after">
+              <img src="img/after-mobile@1x.png" width="320" height="240" alt="Худой кот">
+            </div>
           </div>
           <div class="slider__actions">
             <label for="before" class="slider__btn">Было</label>
@@ -159,17 +172,18 @@
   <footer class="page-footer">
     <div class="contacts">
       <div class="contacts__text-box contacts__text-box--white">
-        <p class="contacts__half contacts__greeting">
-          Приглашаем <br> к сотрудничеству дилеров!
+        <p class="contacts__half contacts__greeting theme__block-title">
+          Приглашаем<br> к сотрудничеству дилеров!
         </p>
-        <p class="contacts__half contacts__address">
-          ул. Большая <br> Конюшенная, д. 19/8 Санкт-Петербург
+        <p class="contacts__half contacts__address theme__text">
+          ул. Большая<br> Конюшенная, д. 19/8
+          <span class="contacts__city">Санкт-Петербург</span>
         </p>
       </div>
       <div class="contacts__map"></div>
     </div>
 
-    <div class="container">
+    <div class="page-footer__bottom container">
       <div class="page-footer__item page-logo page-logo--footer">
         <a class="page-logo__title">
           <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
@@ -193,7 +207,7 @@
         <h2 class="visually-hidden">Правообладатель</h2>
         <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <svg class="rights-owner__logo" version="1.0" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09" fill="#666">
+          <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09" fill="#666">
             <path d="M13.62.02L13.47 0 0 1.41v24.66l13.47 8.02L26.9 26.1l.04-.03V1.41L13.62.01zm11.4 12.1L13.49 5.34v-.1l-.08.05-.1-.06v.11L1.94 12.12V3.15l11.54-1.21 11.55 1.2v8.99zM13.4 6.8l11.52 6.71-4.48 2.64-7.09-4.22-.01 1.41 5.9 3.52-.86.5-5.03-2.99-.01 1.42 3.82 2.27-.78.52-3.03-1.78-.01 1.41 1.85 1.1-1.8 1.07-11.36-6.75L13.41 6.8zM1.93 15.13l11.4 6.79.02 1.04-7.94-4.73-.02 1.42 7.98 4.8.02 1.07-7.97-4.74-.01 1.42 8.02 4.82.04.02 8.14-4.87V17l3.4-2.03v10.02l-11.54 6.87-11.54-6.87v-9.85z"/>
           </svg>
         </a>

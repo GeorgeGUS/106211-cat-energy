@@ -1,3 +1,16 @@
+.program {
+  @include desktop {
+    padding-top: 40px;
+  }
+}
+
+.program__wrapper {
+  @include desktop {
+    padding: 0;
+    display: flex;
+  }
+}
+
 .program__item {
   margin-bottom: 20px;
   padding: 20px 20px 0;
@@ -5,6 +18,26 @@
 
   &:last-child {
     margin-bottom: 9px;
+  }
+
+  @include tablet {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 55px 285px 43px 50px;
+
+    &--pro {
+      padding-right: 315px;
+    }
+  }
+
+  @include desktop {
+    width: 570px;
+    margin: 40px;
+    padding: 25px 50px;
+
+    &:last-child {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -18,6 +51,12 @@
   line-height: 50px;
   font-weight: normal;
   text-transform: uppercase;
+
+  @include tablet {
+    padding: 22px 0;
+    font-size: 36px;
+    line-height: 1;
+  }
 }
 
 .program__icon {
@@ -33,26 +72,56 @@
     position: absolute;
 
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
 
   &--slim::after {
-    width: 50px;
-    height: 50px;
-    top: 22.5px;
+    width: 100%;
+    height: 97%;
+    top: 42.5%;
     background: url("../img/icon-cat-slim.svg") no-repeat center;
   }
 
   &--pro::after {
-    width: 70px;
-    height: 48px;
-    top: 25px;
+    width: 135%;
+    height: 95%;
+    top: 50%;
     background: url("../img/icon-cat-pro.svg") no-repeat center;
+  }
+
+  @include tablet {
+    position: absolute;
+    right: 42px;
+    top: 92px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @include desktop {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-right: 60px;
+    width: 100px;
+    height: 100px;
   }
 }
 
 .program__description {
   margin: 20px 0;
+
+  @include tablet {
+    margin-top: 3px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @include desktop {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
 }
 
 .program__link {
@@ -73,5 +142,20 @@
     width: 24px;
     height: 1em;
     background: url("../img/icon-right-arrow-long.svg") no-repeat right center;
+  }
+
+  @include tablet {
+    font-size: 20px;
+    padding-left: 2px;
+    border: 0;
+
+    &::after {
+      margin-left: 25px;
+    }
+  }
+
+  @include desktop {
+    padding: 11px 0;
+    margin-bottom: 27px;
   }
 }

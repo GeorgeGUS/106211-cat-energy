@@ -1,35 +1,97 @@
 .intro {
-  padding-top: 27px;
-  background: #ffffff url("../img/index-background-mobile@1x.jpg") no-repeat top;
-  background-size: contain;
+  background:
+    url("../img/index-background-mobile@1x.jpg") no-repeat top,
+    linear-gradient(#63a73a 0, #63a73a 305px, #ffffff 305px, #ffffff 100%);
+
+
+  @include tablet {
+    background: #ffffff;
+  }
+
+  @include desktop {
+    min-height: 560px;
+    background: transparent;
+  }
 }
 
 .intro__wrapper {
+  position: relative;
   padding-bottom: 22px;
   text-align: center;
   color: #ffffff;
+  z-index: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 120px;
+    padding-right: 20px;
+    padding-bottom: 2px;
+    text-align: left;
+    color: $black;
+  }
 }
 
 .intro__title {
-  padding-bottom: 25px;
-  line-height: 1;
+  @include desktop {
+    margin-top: 34px;
+  }
 }
 
 .intro__text {
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 28px;
   font-size: 14px;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+    padding-bottom: 15px;
+  }
+
+  @include desktop {
+    padding-bottom: 25px;
+  }
 }
 
 .intro__image {
   margin: 0 auto;
   margin-bottom: 2px;
   width: 100%;
-  max-width: 650px;
+  max-width: 630px;
   height: auto;
+
+  @include tablet {
+    order: 2;
+    margin-top: -80px;
+    margin-left: -10px;
+    margin-bottom: 0;
+    z-index: -1;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 530px;
+    margin-top: 0;
+    margin-bottom: 55px;
+    width: 525px;
+    height: 500px;
+  }
 }
 
 .intro__btn {
+  order: 1;
   font-size: 14px;
+  color: #ffffff;
+
+  @include tablet {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 3px;
+    padding: 16px 27px;
+    font-size: 20px;
+  }
 }

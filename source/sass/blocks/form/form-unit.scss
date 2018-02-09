@@ -1,16 +1,69 @@
 .form-unit {
   &--no-title {
     padding: 10px 0;
+
+    @include tablet {
+      padding: 30px 0;
+    }
+
+    @include desktop {
+      padding-bottom: 0;
+    }
   }
 
   &--bordered {
-    padding: 9px 0;
-    outline: 1px solid #ededed;
+    margin: 0 -20px;
+    padding: 9px 20px;
+    outline: 1px solid $border-grey;
+
+    @include tablet {
+      margin: 25px -30px 77px 40px;
+      padding: 12px 30px;
+    }
+
+    @include desktop {
+      flex-grow: 1;
+      margin: 48px 0 27px 80px;
+    }
+  }
+}
+
+.form-unit__title {
+  @include tablet {
+    margin: 62px 0 75px;
+
+    &--last {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include desktop {
+    margin: 46px 0 60px;
+
+    &--last {
+      margin: 62px 0 40px;
+    }
   }
 }
 
 .form-unit__row {
   margin: 14px 0;
+
+  @include tablet {
+    margin: 16px 0;
+    padding: 0 40px;
+    padding-bottom: 4px;
+  }
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+    width: 570px;
+
+    &--textarea {
+      width: auto;
+    }
+  }
 }
 
 .form-unit__item {
@@ -23,14 +76,20 @@
 .form-unit__input,
 .form-unit__input::placeholder {
   font-family: $regular;
-  font-size: 16px;
   line-height: 1.12;
   text-transform: uppercase;
+
+  @include tablet {
+    line-height: 1;
+  }
 }
 
 .form-unit__label {
   margin-right: 10px;
-  white-space: nowrap;
+
+  @include desktop {
+    margin-right: 20px;
+  }
 }
 
 .form-unit--no-title .form-unit__label {
@@ -41,12 +100,25 @@
   flex-grow: 1;
   padding: 13px;
   color: $darkgrey;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $border-grey;
+
+  @include tablet {
+    padding: 10px 20px;
+  }
 
   &--textarea {
     height: 150px;
     box-sizing: border-box;
     resize: none;
+
+    @include tablet {
+      height: 175px;
+      padding: 15px 20px;
+    }
+
+    @include desktop {
+      margin-top: 16px;
+    }
   }
 
   &--icon {
@@ -69,15 +141,35 @@
 
 .form-unit__list {
   @include reset-list;
-}
 
-.form-unit__row,
-.form-unit__list {
-  padding: 0 20px;
+  &--checks {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-left: 40px;
+    }
+
+    @include desktop {
+      padding-left: 0;
+    }
+  }
 }
 
 .form-unit__list-item {
   margin: 12px 0;
+}
+
+.form-unit__list--checks .form-unit__list-item {
+  @include tablet {
+    width: 325px;
+    margin: 16px 0;
+  }
+
+  @include desktop {
+    width: 245px;
+    margin: 16px 0;
+  }
 }
 
 .form-unit__label--radio,
@@ -90,10 +182,17 @@
     content: "";
     flex-shrink: 0;
     margin-right: 15px;
-    width: 28px;
-    height: 28px;
-    border: 1px solid #cdcdcd;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-grey;
     background-color: #ffffff;
+    box-sizing: border-box;
+
+    @include tablet {
+      margin-right: 20px;
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -103,6 +202,10 @@
 
 .form-unit__radio:checked + .form-unit__label--radio::before {
   background-image: radial-gradient($green 0, $green 6px, #ffffff 7px, #ffffff 100%);
+
+  @include tablet {
+    background-image: radial-gradient($green 0, $green 9px, #ffffff 10px, #ffffff 100%);
+  }
 }
 
 .form-unit__checkbox:checked + .form-unit__label--checkbox::before {

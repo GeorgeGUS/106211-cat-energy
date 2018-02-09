@@ -69,6 +69,10 @@
       padding: 0 36px;
     }
   }
+
+  @include desktop {
+    padding: 0 calc((100vw - 1300px) / 2);
+  }
 }
 
 .theme__text {

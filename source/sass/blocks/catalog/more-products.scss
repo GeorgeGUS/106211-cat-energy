@@ -32,6 +32,10 @@
     width: 60%;
     font-size: 20px;
   }
+
+  @include desktop {
+    width: auto;
+  }
 }
 
 .more-products__text {

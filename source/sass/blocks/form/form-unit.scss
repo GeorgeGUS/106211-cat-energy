@@ -5,19 +5,25 @@
     @include tablet {
       padding: 30px 0;
     }
+
+    @include desktop {
+      padding-bottom: 0;
+    }
   }
 
   &--bordered {
     margin: 0 -20px;
     padding: 9px 20px;
-    outline: 1px solid #ededed;
+    outline: 1px solid $border-grey;
 
     @include tablet {
-      margin-top: 25px;
-      margin-bottom: 77px;
-      margin-left: 40px;
-      margin-right: -30px;
+      margin: 25px -30px 77px 40px;
       padding: 12px 30px;
+    }
+
+    @include desktop {
+      flex-grow: 1;
+      margin: 48px 0 27px 80px;
     }
   }
 }
@@ -28,6 +34,14 @@
 
     &--last {
       margin-bottom: 40px;
+    }
+  }
+
+  @include desktop {
+    margin: 46px 0 60px;
+
+    &--last {
+      margin: 62px 0 40px;
     }
   }
 }
@@ -43,6 +57,12 @@
 
   @include desktop {
     padding-left: 0;
+    padding-right: 0;
+    width: 570px;
+
+    &--textarea {
+      width: auto;
+    }
   }
 }
 
@@ -66,7 +86,10 @@
 
 .form-unit__label {
   margin-right: 10px;
-  white-space: nowrap;
+
+  @include desktop {
+    margin-right: 20px;
+  }
 }
 
 .form-unit--no-title .form-unit__label {
@@ -90,7 +113,11 @@
 
     @include tablet {
       height: 175px;
-      padding: 17px 20px;
+      padding: 15px 20px;
+    }
+
+    @include desktop {
+      margin-top: 16px;
     }
   }
 
@@ -122,6 +149,10 @@
       flex-wrap: wrap;
       padding-left: 40px;
     }
+
+    @include desktop {
+      padding-left: 0;
+    }
   }
 }
 
@@ -129,9 +160,14 @@
   margin: 12px 0;
 }
 
-@include tablet {
-  .form-unit__list--checks .form-unit__list-item {
+.form-unit__list--checks .form-unit__list-item {
+  @include tablet {
     width: 325px;
+    margin: 16px 0;
+  }
+
+  @include desktop {
+    width: 245px;
     margin: 16px 0;
   }
 }

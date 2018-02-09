@@ -28,8 +28,13 @@
 
   @include tablet {
     position: initial;
+    margin-right: 15px;
     width: 73px;
     height: 57px;
+  }
+
+  @include desktop {
+    margin-right: 12px;
   }
 }
 
@@ -37,12 +42,10 @@
   margin: auto;
 
   @include tablet {
-    margin-left: 15px;
     width: 85px;
   }
 
   @include desktop {
-    margin-left: 12px;
     width: 118px;
     height: 22px;
   }

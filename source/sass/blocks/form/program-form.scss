@@ -1,5 +1,9 @@
-.program-form {
-  //padding-top: 25px;
+.program-form__wrapper {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .program-form__text {
@@ -30,6 +34,11 @@
     padding-top: 35px;
     padding-bottom: 72px;
   }
+
+  @include desktop {
+    padding-top: 46px;
+    padding-bottom: 82px;
+  }
 }
 
 .program-form__submit-btn {
@@ -39,6 +48,12 @@
     width: 285px;
     padding: 16px;
     font-size: 20px;
+  }
+
+  @include desktop {
+    margin-left: 0;
+    width: 570px;
+    margin-right: 80px;
   }
 }
 

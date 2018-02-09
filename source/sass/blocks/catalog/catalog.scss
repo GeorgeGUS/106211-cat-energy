@@ -38,6 +38,13 @@
       border: 1px solid #ededed;
     }
   }
+
+  @include desktop {
+    width: 245px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 41px 38px;
+  }
 }
 
 .catalog__btn {

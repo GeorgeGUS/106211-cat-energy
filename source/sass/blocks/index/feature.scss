@@ -3,12 +3,10 @@
 
   @include tablet {
     padding-bottom: 3px;
-    border-bottom: 1px solid $border-grey;
   }
 
   @include desktop {
     padding-bottom: 0;
-    border-bottom: none;
   }
 }
 

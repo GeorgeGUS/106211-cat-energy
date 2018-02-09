@@ -4,8 +4,25 @@
   align-items: center;
   padding-bottom: 34px;
 
+  @include tablet {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-image: linear-gradient(#ffffff 0, #ffffff 180px, $grey 180px, $grey 100%);
+    overflow: hidden;
+  }
+
   @include desktop {
-    padding-bottom: 74px;
+    padding-bottom: 35px;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
+    overflow: visible;
   }
 }
 
@@ -44,14 +61,12 @@
     &--after {
       right: 0;
       align-items: flex-end;
-      box-shadow:
-        240px 95px 0 -95px #eaeaea,
-        340px 95px 0 -95px #eaeaea;
+      box-shadow: 400px 570px 0 400px #eaeaea;
+      background-image: linear-gradient(#ffffff 0, #ffffff 170px, #eaeaea 170px, #eaeaea 100%);
 
       img {
         z-index: 1;
       }
-      background-image: linear-gradient(#ffffff 0, #ffffff 190px, #eaeaea 190px, #eaeaea 100%);
     }
   }
 
@@ -63,6 +78,7 @@
 
     &--after {
       box-shadow: 400px 590px 0 400px #eaeaea;
+      background-image: linear-gradient(#ffffff 0, #ffffff 190px, #eaeaea 190px, #eaeaea 100%);
     }
   }
 
@@ -99,6 +115,7 @@
 
   @include tablet {
     margin-top: 20px;
+    margin-bottom: 37px;
   }
 
   @include desktop {
@@ -135,7 +152,8 @@
   @include tablet {
     width: 428px;
     height: 6px;
-    background-color: $border-grey;
+    background-color: #dcdcdc;
+    border-color: #dcdcdc;
   }
 
   &::after {

@@ -1,5 +1,4 @@
 .page-footer {
-  position: relative;
   background-color: $grey;
 }
 
@@ -13,7 +12,7 @@
   }
 
   @include desktop {
-    padding-left: 30px;
+    padding-top: 52px;
   }
 }
 

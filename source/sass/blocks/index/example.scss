@@ -4,13 +4,15 @@
 
   @include tablet {
     background-color: #ffffff;
-    padding-bottom: 35px;
+    border-top: 1px solid #e6e6e6;
   }
 
   @include desktop {
     padding-top: 0;
     padding-bottom: 0;
     background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
+    border-top: none;
+    overflow: hidden;
   }
 }
 

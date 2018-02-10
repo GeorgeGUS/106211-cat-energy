@@ -50,7 +50,8 @@
 .page-nav__link {
   display: block;
   padding: 20px;
-  font-family: $medium;
+  font-family: $oswald;
+  font-weight: 600;
   font-size: 20px;
   line-height: 25px;
   text-align: center;
@@ -58,10 +59,22 @@
   text-transform: uppercase;
   color: $black;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    pointer-events: none;
+  }
+
   @include tablet {
     margin: 0 18px;
     padding: 10px 0;
-    font-family: $regular;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.38;
 

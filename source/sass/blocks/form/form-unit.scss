@@ -75,7 +75,7 @@
 .form-unit__label,
 .form-unit__input,
 .form-unit__input::placeholder {
-  font-family: $regular;
+  font-family: $oswald;
   line-height: 1.12;
   text-transform: uppercase;
 
@@ -99,8 +99,10 @@
 .form-unit__input {
   flex-grow: 1;
   padding: 13px;
+  min-width: 100px;
   color: $darkgrey;
   border: 1px solid $border-grey;
+  outline: none;
 
   @include tablet {
     padding: 10px 20px;
@@ -178,6 +180,12 @@
   align-items: center;
   cursor: pointer;
 
+  input:disabled + &,
+  &--disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
   &::before {
     content: "";
     flex-shrink: 0;
@@ -193,6 +201,10 @@
       width: 40px;
       height: 40px;
     }
+  }
+
+  &:hover::before {
+    border-color: #bababa;
   }
 }
 

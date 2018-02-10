@@ -41,7 +41,6 @@
   }
 }
 
-
 .program__title {
   display: flex;
   align-items: center;
@@ -109,7 +108,9 @@
 }
 
 .program__description {
-  margin: 20px 0;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
 
   @include tablet {
     margin-top: 3px;
@@ -128,28 +129,47 @@
   display: flex;
   align-items: center;
   padding: 20px 0;
-
-  @include reset-link($black);
+  text-decoration: none;
+  color: $black;
   text-transform: uppercase;
-  border: 1px solid transparent;
-  border-top-color: #d9d9d9;
   border-left: 0;
 
+  &::before,
   &::after {
     content: "";
-    margin-left: 12px;
-    display: block;
-    width: 24px;
-    height: 1em;
-    background: url("../img/icon-right-arrow-long.svg") no-repeat right center;
+    transition: all 0.2s ease-out;
+  }
+
+  &::before {
+    order: 1;
+    margin-left: 10px;
+    width: 19px;
+    height: 3px;
+    background-color: $darkgrey;
+  }
+
+  &::after {
+    order: 2;
+    border: 5.5px solid transparent;
+    border-left-color: $darkgrey;
+  }
+
+  &:hover::before {
+    width: 27px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: none;
   }
 
   @include tablet {
+    display: inline-flex;
     font-size: 20px;
     padding-left: 2px;
     border: 0;
 
-    &::after {
+    &::before {
       margin-left: 25px;
     }
   }

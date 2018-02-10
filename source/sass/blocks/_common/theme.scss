@@ -90,7 +90,7 @@
   display: block;
   width: 100%;
   padding: 10px 20px;
-  font-family: $regular;
+  font-family: $oswald;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -101,8 +101,34 @@
   border: none;
   box-sizing: border-box;
 
-  &--ghost {
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--grey {
     color: black;
     background-color: $grey;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.theme__disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
+
+  .theme__btn {
+    pointer-events: none;
   }
 }

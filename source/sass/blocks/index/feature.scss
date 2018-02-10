@@ -11,7 +11,7 @@
 }
 
 .feature__list {
-  @include reset-list();
+  @include reset-list;
   padding-bottom: 2px;
 
   @include tablet {

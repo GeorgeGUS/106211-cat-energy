@@ -6,15 +6,27 @@
   padding-bottom: 10px;
   height: 45px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--index {
+    pointer-events: none;
+  }
+
   &--footer {
     padding-top: 29px;
     padding-bottom: 20px;
 
     @include tablet {
       padding: 0;
+      margin-right: 30px;
 
       .page-logo__title {
-        margin-right: 27px;
         width: 128px;
       }
     }
@@ -27,7 +39,7 @@
   left: 0;
 
   @include tablet {
-    position: initial;
+    position: static;
     margin-right: 15px;
     width: 73px;
     height: 57px;

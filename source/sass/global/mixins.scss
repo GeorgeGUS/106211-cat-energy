@@ -4,11 +4,6 @@
   list-style: none;
 }
 
-@mixin reset-link($color: #000) {
-  text-decoration: none;
-  color: $color;
-}
-
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;

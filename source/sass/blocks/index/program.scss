@@ -15,6 +15,7 @@
   margin-bottom: 20px;
   padding: 20px 20px 0;
   background-color: $grey;
+  overflow: hidden;
 
   &:last-child {
     margin-bottom: 9px;
@@ -23,7 +24,7 @@
   @include tablet {
     position: relative;
     margin-bottom: 30px;
-    padding: 55px 285px 43px 50px;
+    padding: 55px 285px 40px 50px;
 
     &--pro {
       padding-right: 315px;
@@ -40,7 +41,6 @@
     }
   }
 }
-
 
 .program__title {
   display: flex;
@@ -109,18 +109,21 @@
 }
 
 .program__description {
-  margin: 20px 0;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #d9d9d9;
 
   @include tablet {
-    margin-top: 3px;
-    margin-bottom: 35px;
+    padding-top: 5px;
+    padding-bottom: 35px;
     font-size: 16px;
     line-height: 1.5;
+    border-bottom: 0;
   }
 
   @include desktop {
-    margin-top: 18px;
-    margin-bottom: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 }
 
@@ -128,28 +131,48 @@
   display: flex;
   align-items: center;
   padding: 20px 0;
-
-  @include reset-link($black);
+  text-decoration: none;
+  color: $black;
   text-transform: uppercase;
-  border: 1px solid transparent;
-  border-top-color: #d9d9d9;
   border-left: 0;
 
+  &::before,
   &::after {
-    content: "";
-    margin-left: 12px;
     display: block;
-    width: 24px;
-    height: 1em;
-    background: url("../img/icon-right-arrow-long.svg") no-repeat right center;
+    content: "";
+    transition: all 0.2s ease-out;
+  }
+
+  &::before {
+    order: 1;
+    margin-left: 10px;
+    width: 19px;
+    height: 3px;
+    background-color: $darkgrey;
+  }
+
+  &::after {
+    order: 2;
+    border: 5.5px solid transparent;
+    border-left-color: $darkgrey;
+  }
+
+  &:hover::before {
+    width: 27px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: none;
   }
 
   @include tablet {
+    display: inline-flex;
     font-size: 20px;
     padding-left: 2px;
     border: 0;
 
-    &::after {
+    &::before {
       margin-left: 25px;
     }
   }

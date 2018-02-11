@@ -1,23 +1,43 @@
 .more-products {
-  text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
 
-  &::before {
+
+.more-products__icon {
+  position: relative;
+  margin: 25px 0;
+  width: 30px;
+  height: 30px;
+  opacity: 0.2;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     content: "";
     display: block;
-    margin: 25px 0;
-    width: 30px;
-    height: 30px;
-    background: url("../img/icon-plus-mobile.svg") no-repeat center;
-    opacity: 0.2;
+    width: 100%;
+    height: 2px;
+    background-color: #222222;
+  }
 
-    @include tablet {
-      margin: 15px 0 17px;
-      width: 60px;
-      height: 60px;
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  @include tablet {
+    margin: 15px 0 17px;
+    width: 60px;
+    height: 60px;
+
+    &::before,
+    &::after {
+      background-color: #818181;
     }
   }
 }
@@ -34,7 +54,7 @@
   }
 
   @include desktop {
-    width: auto;
+    width: 100%;
   }
 }
 

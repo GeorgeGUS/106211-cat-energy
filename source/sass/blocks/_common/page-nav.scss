@@ -1,3 +1,5 @@
+
+
 .page-nav__toggle {
   position: absolute;
   top: 23px;
@@ -5,9 +7,17 @@
   width: 18px;
   height: 18px;
   font-size: 0;
-  background: transparent url("../img/icon-close.svg") no-repeat center;
+  background: transparent url("../img/icon-mobile-menu.svg") no-repeat center;
   border: none;
   cursor: pointer;
+
+  .page-nav--opened & {
+    background-image: url("../img/icon-close.svg");
+  }
+
+  .page-nav--no-js & {
+    display: none;
+  }
 
   @include tablet {
     display: none;
@@ -15,9 +25,16 @@
 }
 
 .page-nav__list {
+  display: none;
   margin: 0 -20px;
   padding: 0;
   list-style: none;
+  transition: height 0.5s ease-out;
+
+  .page-nav--no-js &,
+  .page-nav--opened & {
+    display: block;
+  }
 
   @include tablet {
     display: flex;
@@ -50,7 +67,8 @@
 .page-nav__link {
   display: block;
   padding: 20px;
-  font-family: $medium;
+  font-family: $oswald;
+  font-weight: 600;
   font-size: 20px;
   line-height: 25px;
   text-align: center;
@@ -58,10 +76,22 @@
   text-transform: uppercase;
   color: $black;
 
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    pointer-events: none;
+  }
+
   @include tablet {
     margin: 0 18px;
     padding: 10px 0;
-    font-family: $regular;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.38;
 
@@ -75,7 +105,6 @@
     line-height: 1.24;
   }
 }
-
 
 @include desktop {
   .page-nav__list--index .page-nav__link {

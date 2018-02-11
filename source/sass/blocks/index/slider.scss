@@ -5,21 +5,13 @@
   padding-bottom: 34px;
 
   @include tablet {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin: 0 (-$tablet-pads);
     background-image: linear-gradient(#ffffff 0, #ffffff 180px, $grey 180px, $grey 100%);
     overflow: hidden;
   }
 
   @include desktop {
     padding-bottom: 35px;
-    width: auto;
-    left: 0;
-    right: 0;
     margin: 0;
     background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
     overflow: visible;
@@ -48,6 +40,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  transition: all 0.3s linear;
 
   &--after {
     width: 0;
@@ -114,17 +107,17 @@
   padding: 2px;
 
   @include tablet {
-    margin-top: 20px;
-    margin-bottom: 37px;
+    margin-top: 15px;
+    margin-bottom: 30px;
   }
 
   @include desktop {
-    margin-top: 40px;
+    margin-top: 33px;
   }
 }
 
 .slider__btn {
-  width: 78px;
+  margin: 0 20px;
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
@@ -133,15 +126,26 @@
   z-index: 1;
 
   @include tablet {
-    width: 92px;
+    padding: 6px 0;
     font-size: 20px;
     line-height: 1;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom: 0;
+    }
   }
 }
 
 .slider__scale {
-  margin: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
   width: 85px;
   height: 14px;
   border-radius: 6px;
@@ -155,29 +159,46 @@
     background-color: #dcdcdc;
     border-color: #dcdcdc;
   }
+}
 
-  &::after {
-    position: absolute;
-    top: 3px;
-    left: 6px;
-    content: "";
-    display: block;
-    width: 35px;
-    height: 6px;
-    border-radius: 3px;
-    background-color: #68b738;
-    cursor: pointer;
+.slider__grip {
+  position: relative;
+  left: 0;
+  flex-shrink: 0;
+  content: "";
+  display: block;
+  width: 35px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: $green;
+  cursor: pointer;
 
-    @include tablet {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 34px;
-      height: 34px;
-      background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);
-      border: 1px solid $border-grey;
-      border-radius: 50%;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  @include tablet {
+    //margin-left: calc(50% - 16px);
+    left: calc(50% - 16px);
+    width: 34px;
+    height: 34px;
+    background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);
+    border: 1px solid $border-grey;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+
+    &:hover {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid $green;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
     }
   }
+}
+
+.slider__before:checked ~ .slider__actions .slider__grip {
+  left: 0;
+}
+
+.slider__after:checked ~ .slider__actions .slider__grip {
+  left: calc(100% - 35px);
 }

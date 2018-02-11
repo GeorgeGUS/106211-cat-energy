@@ -1,6 +1,7 @@
 html,
 body {
-  font-family: $regular;
+  font-family: $oswald;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1;
 }
@@ -14,12 +15,10 @@ img {
   margin: 0 auto;
   padding: 0 $mobile-pads;
   min-width: $mobile-width;
-  width: $mobile-width;
   box-sizing: border-box;
 
   @include tablet {
     padding: 0 $tablet-pads;
-    width: $tablet-width;
   }
 
   @include desktop {

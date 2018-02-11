@@ -11,7 +11,7 @@
 }
 
 .feature__list {
-  @include reset-list();
+  @include reset-list;
   padding-bottom: 2px;
 
   @include tablet {
@@ -40,12 +40,15 @@
     &::after {
       content: counter(feature_num);
       position: absolute;
-      top: -39px;
-      right: 90px;
-      width: 120px;
+      top: -40px;
+      right: 80px;
       font-size: 280px;
       color: #f2f2f2;
       z-index: -1;
+    }
+
+    &:first-child::after {
+      right: 95px;
     }
   }
 
@@ -54,7 +57,11 @@
     width: 245px;
 
     &::after {
-      right: 10px;
+      right: 0;
+    }
+
+    &:first-child::after {
+      right: 15px;
     }
   }
 

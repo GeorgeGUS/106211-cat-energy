@@ -97,12 +97,31 @@
 }
 
 .form-unit__input {
+  display: inline-block;
   flex-grow: 1;
   padding: 13px;
   min-width: 100px;
   color: $darkgrey;
   border: 1px solid $border-grey;
   outline: none;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #bababa;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $darkgrey;
+    box-shadow: inset 0 0 0 1px $darkgrey;
+  }
+
+  &:active:invalid,
+  &:focus:invalid,
+  &.invalid {
+    border-color: $red;
+    box-shadow: inset 0 0 0 1px $red;
+  }
 
   @include tablet {
     padding: 10px 20px;
@@ -122,22 +141,35 @@
       margin-top: 16px;
     }
   }
+}
 
-  &--icon {
-    padding-right: 44px;
-    background-repeat: no-repeat;
+.form-unit__input-wrapper {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+
+  .form-unit__input {
+    padding-right: 50px;
+  }
+}
+
+.form-unit__icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+
+  .form-unit__input:active + &,
+  .form-unit__input:focus + & {
+    fill: $green;
   }
 
-  &--email {
-    background-image: url("../img/icon-mail.svg");
-    background-position: calc(100% - 15px) center;
-    background-size: 17px 13px;
-  }
-
-  &--phone {
-    background-image: url("../img/icon-phone.svg");
-    background-position: calc(100% - 12px) center;
-    background-size: 20px;
+  .form-unit__input:active:invalid + &,
+  .form-unit__input:focus:invalid + &,
+  .invalid + & {
+    fill: $red;
   }
 }
 
@@ -179,14 +211,17 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  flex-grow: 1;
+  margin-right: 0;
 
   input:disabled + &,
-  &--disabled {
+  &.disabled {
     opacity: 0.3;
     cursor: not-allowed;
   }
 
   &::before {
+    display: block;
     content: "";
     flex-shrink: 0;
     margin-right: 15px;
@@ -220,7 +255,12 @@
   }
 }
 
+.form-unit__label--checkbox:active::before,
 .form-unit__checkbox:checked + .form-unit__label--checkbox::before {
   background: url("../img/icon-tick.svg") no-repeat center;
   background-size: 21px;
+}
+
+.form-unit__checkbox:checked + .form-unit__label--checkbox:active::before {
+  background-image: none;
 }

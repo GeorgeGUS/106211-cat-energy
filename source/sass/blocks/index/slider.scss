@@ -5,21 +5,13 @@
   padding-bottom: 34px;
 
   @include tablet {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin: 0 (-$tablet-pads);
     background-image: linear-gradient(#ffffff 0, #ffffff 180px, $grey 180px, $grey 100%);
     overflow: hidden;
   }
 
   @include desktop {
     padding-bottom: 35px;
-    width: auto;
-    left: 0;
-    right: 0;
     margin: 0;
     background-image: linear-gradient(#ffffff 0, #ffffff 200px, $grey 200px, $grey 100%);
     overflow: visible;
@@ -150,8 +142,10 @@
 }
 
 .slider__scale {
-  margin: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
   width: 85px;
   height: 14px;
   border-radius: 6px;
@@ -168,9 +162,9 @@
 }
 
 .slider__grip {
-  position: absolute;
-  top: 3px;
-  left: 6px;
+  position: relative;
+  left: 0;
+  flex-shrink: 0;
   content: "";
   display: block;
   width: 35px;
@@ -180,15 +174,15 @@
   cursor: pointer;
 
   @include tablet {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    //margin-left: calc(50% - 16px);
+    left: calc(50% - 16px);
     width: 34px;
     height: 34px;
     background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);
     border: 1px solid $border-grey;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
 
     &:hover {
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
@@ -206,5 +200,5 @@
 }
 
 .slider__after:checked ~ .slider__actions .slider__grip {
-  left: 100%;
+  left: calc(100% - 35px);
 }

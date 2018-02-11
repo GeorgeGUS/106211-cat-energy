@@ -100,7 +100,8 @@
   display: inline-block;
   flex-grow: 1;
   padding: 13px;
-  min-width: 100px;
+  min-width: 70px;
+  height: 45px;
   color: $darkgrey;
   border: 1px solid $border-grey;
   outline: none;
@@ -124,6 +125,8 @@
   }
 
   @include tablet {
+    height: 52px;
+    line-height: 1.5;
     padding: 10px 20px;
   }
 

@@ -6,7 +6,6 @@
   background-size: 100%;
 
   @include retina {
-
     background-image:
       linear-gradient(to top, #ffffff 97px, transparent 97px),
       url("../img/index-background-mobile@2x.jpg"),
@@ -34,9 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 2px;
+    padding: 0 20px;
     text-align: left;
     color: $black;
   }
@@ -86,9 +83,10 @@
   height: auto;
 
   @include tablet {
-    width: auto;
     margin-top: -80px;
     z-index: -1;
+    width: 709px;
+    height: 609px;
   }
 
   @include desktop {

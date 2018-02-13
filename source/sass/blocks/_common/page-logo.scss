@@ -34,27 +34,37 @@
 }
 
 .page-logo__image {
-  position: absolute;
-  top: 11px;
-  left: 0;
+  width: 33px;
+  height: 38px;
 
   @include tablet {
-    position: static;
-    margin-right: 15px;
-    width: 73px;
-    height: 57px;
+    width: 173px;
+    height: 59px;
   }
 
   @include desktop {
-    margin-right: 12px;
+    width: 202px;
+    height: 60px;
   }
 }
 
 .page-logo__title {
   margin: auto;
 
+  &--header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
   @include tablet {
     width: 85px;
+
+    &--header {
+      display: none;
+    }
   }
 
   @include desktop {

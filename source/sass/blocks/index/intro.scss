@@ -1,8 +1,14 @@
 .intro {
   background:
-    url("../img/index-background-mobile@1x.jpg") no-repeat top,
-    linear-gradient(#63a73a 0, #63a73a 305px, #ffffff 305px, #ffffff 100%);
+    linear-gradient(to top, #ffffff 175px, transparent 175px),
+    url("../img/index-background-mobile@1x.jpg") no-repeat top;
+  background-size: 100%;
 
+  @include retina {
+    background-image:
+      linear-gradient(to top, #ffffff 175px, transparent 175px),
+      url("../img/index-background-mobile@2x.jpg");
+  }
 
   @include tablet {
     background: #ffffff;
@@ -59,22 +65,22 @@
 .intro__image {
   margin: 0 auto;
   margin-bottom: 2px;
-  width: 100%;
+  //width: 100%;
   max-width: 630px;
   height: auto;
 
   @include tablet {
     order: 2;
     margin-top: -80px;
-    //margin-left: -10px;
     margin-bottom: 0;
+    width: 100%;
     z-index: -1;
   }
 
   @include desktop {
     position: absolute;
     top: 0;
-    left: 530px;
+    left: 520px;
     margin-top: 0;
     margin-bottom: 55px;
     width: 525px;

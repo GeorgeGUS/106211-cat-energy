@@ -21,7 +21,7 @@
   @include tablet {
     justify-content: space-between;
     align-items: center;
-    padding: 60px 70px 55px;
+    padding: 60px 70px 52px;
 
     &--white {
       background-color: #ffffff;
@@ -82,7 +82,7 @@
   background-color: #fdf7ef;
 
   @include tablet {
-    height: 394px;
+    height: 395px;
   }
 
   @include desktop {

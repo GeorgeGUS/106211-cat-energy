@@ -16,8 +16,18 @@
 }
 
 .socials__item {
-  margin: 0 17px;
-  width: 20px;
+  margin: 0 18px;
+  width: 21px;
+
+  @include tablet {
+    margin: 0 15px;
+    width: 25px;
+
+    &:nth-child(2) {
+      margin: 0 18px;
+      width: 19px;
+    }
+  }
 }
 
 .socials__link {

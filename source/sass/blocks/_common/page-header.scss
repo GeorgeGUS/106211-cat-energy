@@ -4,10 +4,27 @@
 
   @include desktop {
     &--index {
-      background:
-        url("../img/index-background-mobile@1x.jpg") no-repeat calc((100vw - 1440px) / 2 + 760px),
-        linear-gradient(to left, #63a73a 0, #63a73a calc((100vw - 1440px) / 2 + 680px), #ffffff  calc((100vw - 1440px) / 2 + 680px), #ffffff 100%);
-      background-size: contain;
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: calc((100% - 1440px) / 2 + 760px);
+        background-color: #63a73a;
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: cover;
+        z-index: -1;
+
+        @include retina {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+        }
+      }
     }
   }
 }

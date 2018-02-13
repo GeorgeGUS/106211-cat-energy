@@ -32,6 +32,8 @@
     <link href="pixel-glass/styles.css" rel="stylesheet">
     <script src="pixel-glass/script.js"></script>
     <!-- // Pixel Glass -->
+
+    <script src="js/picturefill.js"></script>
   </head>
   <body>
 
@@ -52,14 +54,18 @@
     </div>
     <section class="intro">
       <div class="intro__wrapper container">
-        <h2 class="intro__title theme__title theme__title--top">
+        <h2 class="intro__content intro__title theme__title theme__title--top">
           Функциональное<br> питание для котов
         </h2>
-        <p class="intro__text">
+        <p class="intro__content intro__text">
           Занялся собой? Займись котом!
         </p>
-        <img class="intro__image" src="img/index-can-mobile@1x.png" alt="Внешний вид товара" width="280" height="270">
-        <a class="intro__btn theme__btn" href="form.html">
+        <picture class="intro__image-wrapper">
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+          <img class="intro__image" srcset="img/index-can-mobile@1x.png 1x, img/index-can-mobile@2x.png 2x" alt="Внешний вид товара" width="280" height="270">
+        </picture>
+        <a class="intro__content intro__btn theme__btn" href="form.html">
           Подобрать программу
         </a>
       </div>

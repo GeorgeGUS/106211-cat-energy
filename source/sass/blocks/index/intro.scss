@@ -1,13 +1,16 @@
 .intro {
   background:
-    linear-gradient(to top, #ffffff 175px, transparent 175px),
-    url("../img/index-background-mobile@1x.jpg") no-repeat top;
+    linear-gradient(to top, #ffffff 97px, transparent 97px),
+    url("../img/index-background-mobile@1x.jpg") no-repeat top,
+    linear-gradient(to top, #ffffff 197px, #61a63c 197px);
   background-size: 100%;
 
   @include retina {
+
     background-image:
-      linear-gradient(to top, #ffffff 175px, transparent 175px),
-      url("../img/index-background-mobile@2x.jpg");
+      linear-gradient(to top, #ffffff 97px, transparent 97px),
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(to top, #ffffff 197px, #61a63c 197px);
   }
 
   @include tablet {

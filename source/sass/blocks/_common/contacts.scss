@@ -78,18 +78,37 @@
 }
 
 .contacts__map {
-  height: 362px;
+  margin-top: -38px;
+  height: 400px;
   background-color: #fdf7ef;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+
+  @include retina {
+    background-image: url("../img/bg-map-mobile@2x.png");
+  }
 
   @include tablet {
-    height: 395px;
+    margin-top: -5px;
+    background-image: url("../img/bg-map-tablet@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-map-tablet@2x.png");
+    }
   }
 
   @include desktop {
     position: absolute;
     top: 0;
     left: 0;
+    margin-top: 0;
     width: 100%;
-    height: 400px;
+    background-image: url("../img/bg-map-desktop@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-map-desktop@2x.png");
+    }
   }
 }

@@ -32,14 +32,20 @@
     <link href="pixel-glass/styles.css" rel="stylesheet">
     <script src="pixel-glass/script.js"></script>
     <!-- // Pixel Glass -->
+
+    <script src="js/picturefill.js"></script>
   </head>
   <body>
 
   <header class="page-header page-header--index">
     <div class="page-header__wrapper container">
       <a class="page-logo page-logo--index">
-        <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
-        <img class="page-logo__title" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+        </picture>
+        <img class="page-logo__title page-logo__title--header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
       </a>
       <nav class="page-nav page-nav--no-js">
         <button class="page-nav__toggle" type="button">Показать меню</button>
@@ -52,14 +58,18 @@
     </div>
     <section class="intro">
       <div class="intro__wrapper container">
-        <h2 class="intro__title theme__title theme__title--top">
+        <h2 class="intro__content intro__title theme__title theme__title--top">
           Функциональное<br> питание для котов
         </h2>
-        <p class="intro__text">
+        <p class="intro__content intro__text">
           Занялся собой? Займись котом!
         </p>
-        <img class="intro__image" src="img/index-can-mobile@1x.png" alt="Внешний вид товара" width="280" height="270">
-        <a class="intro__btn theme__btn" href="form.html">
+        <picture class="intro__image-wrapper">
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+          <img class="intro__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Внешний вид товара" width="280" height="270">
+        </picture>
+        <a class="intro__content intro__btn theme__btn" href="form.html">
           Подобрать программу
         </a>
       </div>
@@ -153,10 +163,18 @@
 
           <div class="slider__images">
             <div class="slider__image slider__image--before">
-              <img src="img/before-mobile@1x.png" width="320" height="240" alt="Толстый кот">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="320" height="240" alt="Толстый кот">
+              </picture>
             </div>
             <div class="slider__image slider__image--after">
-              <img src="img/after-mobile@1x.png" width="320" height="240" alt="Худой кот">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img src="img/before-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="320" height="240" alt="Худой кот">
+              </picture>
             </div>
           </div>
           <div class="slider__actions">

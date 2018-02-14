@@ -7,12 +7,12 @@
   width: 18px;
   height: 18px;
   font-size: 0;
-  background: transparent url("../img/icon-mobile-menu.svg") no-repeat center;
+  background: transparent url("../img/vector/icon-mobile-menu.svg") no-repeat center;
   border: none;
   cursor: pointer;
 
   .page-nav--opened & {
-    background-image: url("../img/icon-close.svg");
+    background-image: url("../img/vector/icon-close.svg");
   }
 
   .page-nav--no-js & {

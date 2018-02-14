@@ -46,7 +46,8 @@
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
       </picture>
-      <img class="page-logo__title page-logo__title--header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+      <img class="page-logo__title page-logo__title--header" src="img/logo-mobile-header.svg" alt="Cat Energy"
+           width="101" height="18">
     </a>
     <nav class="page-nav page-nav--no-js">
       <button class="page-nav__toggle" type="button">Показать меню</button>
@@ -110,7 +111,8 @@
           </li>
           <li class="form-unit__list-item">
             <label class="form-unit__item theme__block-title">
-              <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)" class="form-unit__radio visually-hidden">
+              <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)"
+                     class="form-unit__radio visually-hidden">
               <span class="form-unit__label form-unit__label--radio">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
@@ -126,7 +128,9 @@
             <span class="form-unit__label">E-mail:*</span>
             <span class="form-unit__input-wrapper">
               <input type="email" class="form-unit__input" name="E-mail" placeholder="kuklachev@gmail.com" required>
-              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"><path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/></svg>
+              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13"
+                   viewBox="0 0 17 13"><path
+                d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/></svg>
             </span>
           </label>
         </p>
@@ -135,7 +139,9 @@
             <span class="form-unit__label">Телефон:*</span>
             <span class="form-unit__input-wrapper">
               <input type="tel" class="form-unit__input" name="Телефон" placeholder="8 (960) 900-60-90" required>
-              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1A3 3 0 0 0 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/></svg>
+              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                   viewBox="0 0 20 20"><path
+                d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1A3 3 0 0 0 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/></svg>
             </span>
           </label>
         </p>
@@ -195,16 +201,18 @@
 
 <footer class="page-footer">
   <div class="contacts">
-    <div class="contacts__text-box">
-      <p class="contacts__half contacts__greeting theme__block-title">
-        Приглашаем<br> к сотрудничеству дилеров!
-      </p>
-      <p class="contacts__half contacts__address theme__text">
-        ул. Большая<br> Конюшенная, д. 19/8
-        <span class="contacts__city">Санкт-Петербург</span>
-      </p>
+    <div class="contacts__text-wrapper">
+      <div class="contacts__text-box">
+        <p class="contacts__half contacts__greeting theme__block-title">
+          Приглашаем<br> к сотрудничеству дилеров!
+        </p>
+        <p class="contacts__half contacts__address theme__text">
+          ул. Большая<br> Конюшенная, д. 19/8
+          <span class="contacts__city">Санкт-Петербург</span>
+        </p>
+      </div>
     </div>
-    <div class="contacts__map"></div>
+    <div class="contacts__map" id="map"></div>
   </div>
 
   <div class="page-footer__bottom container">
@@ -259,6 +267,7 @@
 </footer>
 
 <script src="js/menu.js"></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="js/map.js"></script>
 </body>
 </html>

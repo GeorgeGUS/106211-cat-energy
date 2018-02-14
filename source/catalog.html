@@ -327,16 +327,18 @@
 
   <footer class="page-footer">
     <div class="contacts">
-      <div class="contacts__text-box">
-        <p class="contacts__half contacts__greeting theme__block-title">
-          Приглашаем<br> к сотрудничеству дилеров!
-        </p>
-        <p class="contacts__half contacts__address theme__text">
-          ул. Большая<br> Конюшенная, д. 19/8
-          <span class="contacts__city">Санкт-Петербург</span>
-        </p>
+      <div class="contacts__text-wrapper">
+        <div class="contacts__text-box">
+          <p class="contacts__half contacts__greeting theme__block-title">
+            Приглашаем<br> к сотрудничеству дилеров!
+          </p>
+          <p class="contacts__half contacts__address theme__text">
+            ул. Большая<br> Конюшенная, д. 19/8
+            <span class="contacts__city">Санкт-Петербург</span>
+          </p>
+        </div>
       </div>
-      <div class="contacts__map"></div>
+      <div class="contacts__map" id="map"></div>
     </div>
 
     <div class="page-footer__bottom container">
@@ -378,6 +380,7 @@
   </footer>
 
   <script src="js/menu.js"></script>
-
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="js/map.js"></script>
   </body>
 </html>

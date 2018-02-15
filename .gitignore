@@ -8,6 +8,5 @@
 node_modules/
 npm-debug.*
 source/css/*.css
-source/layouts/
-source/pixel-glass/
+build/
 Thumbs.db

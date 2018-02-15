@@ -31,7 +31,7 @@
     position: relative;
     flex-direction: column;
     align-items: flex-start;
-    margin: 38px 0;
+    margin: 37px 0 38px;
     padding-bottom: 60px;
     width: 325px;
     counter-increment: feature_num;
@@ -84,34 +84,34 @@
   }
 
   &--leaf::before {
-    background-image: url("../img/advantage-leaf@1x.png");
+    background-image: url("../img/raster/advantage-leaf@1x.png");
 
     @include retina {
-      background-image: url("../img/advantage-leaf@2x.png");
+      background-image: url("../img/raster/advantage-leaf@2x.png");
     }
   }
 
   &--powder::before {
-    background-image: url("../img/advantage-powder@1x.png");
+    background-image: url("../img/raster/advantage-powder@1x.png");
 
     @include retina {
-      background-image: url("../img/advantage-powder@2x.png");
+      background-image: url("../img/raster/advantage-powder@2x.png");
     }
   }
 
   &--dining::before {
-    background-image: url("../img/advantage-dining@1x.png");
+    background-image: url("../img/raster/advantage-dining@1x.png");
 
     @include retina {
-      background-image: url("../img/advantage-dining@2x.png");
+      background-image: url("../img/raster/advantage-dining@2x.png");
     }
   }
 
   &--clock::before {
-    background-image: url("../img/advantage-clock@1x.png");
+    background-image: url("../img/raster/advantage-clock@1x.png");
 
     @include retina {
-      background-image: url("../img/advantage-clock@2x.png");
+      background-image: url("../img/raster/advantage-clock@2x.png");
     }
   }
 }

@@ -42,11 +42,11 @@
   <div class="page-header__wrapper container">
     <a class="page-logo" href="index.html">
       <picture>
-        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img class="page-logo__image" src="img/icon-logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+        <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
+        <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
       </picture>
-      <img class="page-logo__title page-logo__title--header" src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+      <img class="page-logo__title page-logo__title--header" src="img/vector/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
     </a>
     <nav class="page-nav page-nav--no-js">
       <button class="page-nav__toggle" type="button">Показать меню</button>
@@ -147,8 +147,7 @@
       <div class="container">
         <p class="form-unit__row form-unit__row--textarea">
           <label class="form-unit__item theme__block-title">
-            <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий" cols="28" rows="4"
-                      placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </p>
       </div>
@@ -195,51 +194,47 @@
 
 <footer class="page-footer">
   <div class="contacts">
-    <div class="contacts__text-box">
-      <p class="contacts__half contacts__greeting theme__block-title">
-        Приглашаем<br> к сотрудничеству дилеров!
-      </p>
-      <p class="contacts__half contacts__address theme__text">
-        ул. Большая<br> Конюшенная, д. 19/8
-        <span class="contacts__city">Санкт-Петербург</span>
-      </p>
+    <div class="contacts__text-wrapper">
+      <div class="contacts__text-box">
+        <p class="contacts__half contacts__greeting theme__block-title">
+          Приглашаем<br> к сотрудничеству дилеров!
+        </p>
+        <p class="contacts__half contacts__address theme__text">
+          ул. Большая<br> Конюшенная, д. 19/8
+          <span class="contacts__city">Санкт-Петербург</span>
+        </p>
+      </div>
     </div>
-    <div class="contacts__map"></div>
+    <div class="contacts__map" id="map"></div>
   </div>
 
   <div class="page-footer__bottom container">
     <div class="page-footer__item page-logo page-logo--footer">
       <a href="index.html" class="page-logo__title">
-        <img src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
+        <img src="img/vector/logo-footer.svg" alt="Cat Energy" width="128" height="24">
       </a>
     </div>
     <section class="page-footer__item socials">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
       <ul class="socials__list">
         <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="#">Вконтакте
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 12">
-              <path
-                d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9c.3-.3.8-.4 1-.4h3.1c.1 0 .4.1.7.3.3.2.4.5.5.6a16.53 16.53 0 0 0 2.6 4c.1-.4.2-1.4.1-2.3 0-.4-.1-.8-.2-1-.1-.1-.3-.2-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5c.9 0 1.2.1 1.6.1 1.2.3 1.2 1.3 1.1 2.5v1.6c0 .3 0 .8.1 1 .2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5-.3.3-.5.6-.7.9-.5.4-.9 1-.9 1.1 0 .1.5.5.9.9 1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.9zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9c.1 0 .3-.1.4-.1 0 0 0-.1-.1-.1-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1.2-.2.4-.5.7-.8 1.1-1.4 1.4-2 1.5-2.3h-3.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4-.1 0-.3 0-.4-.1-.7-.4-.7-1.4-.7-2.1V2.6c.1-1.3 0-1.3-.3-1.4-.3-.1-.5-.1-1.4-.1H10c-.5 0-1 0-1.4.1l.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3-.1 0-.2.1-.4.1-.6 0-1.3-.7-2.5-2.5C5 2.9 4.5 1.8 4.5 1.8s0-.1-.1-.1-.2-.1-.2-.1h-3c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4s.2 0 .2-.1v-.1c0-.2 0-2 1.2-2.3h.2z"/>
+          <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">Вконтакте
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+              <use xlink:href="img/vector/sprite-icons.svg#icon-vk-mobile"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link socials__link--ig" href="#">Instagram
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-              <path
-                d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z"/>
-              <path
-                d="M8 4.9c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1m0-1C5.7 3.9 3.9 5.7 3.9 8s1.8 4.1 4.1 4.1 4.1-1.8 4.1-4.1S10.3 3.9 8 3.9z"/>
-              <circle cx="12.3" cy="3.7" r=".9"/>
+          <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+              <use xlink:href="img/vector/sprite-icons.svg#icon-insta-mobile"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
-          <a class="socials__link socials__link--fb" href="#">Facebook
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19" viewBox="0 0 10 19">
-              <path
-                d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z"/>
+          <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
+              <use xlink:href="img/vector/sprite-icons.svg#icon-fb-mobile"></use>
             </svg>
           </a>
         </li>
@@ -250,8 +245,7 @@
       <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
         HTML Academy
         <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
-          <path
-            d="M13.62.02L13.47 0 0 1.41v24.66l13.47 8.02L26.9 26.1l.04-.03V1.41L13.62.01zm11.4 12.1L13.49 5.34v-.1l-.08.05-.1-.06v.11L1.94 12.12V3.15l11.54-1.21 11.55 1.2v8.99zM13.4 6.8l11.52 6.71-4.48 2.64-7.09-4.22-.01 1.41 5.9 3.52-.86.5-5.03-2.99-.01 1.42 3.82 2.27-.78.52-3.03-1.78-.01 1.41 1.85 1.1-1.8 1.07-11.36-6.75L13.41 6.8zM1.93 15.13l11.4 6.79.02 1.04-7.94-4.73-.02 1.42 7.98 4.8.02 1.07-7.97-4.74-.01 1.42 8.02 4.82.04.02 8.14-4.87V17l3.4-2.03v10.02l-11.54 6.87-11.54-6.87v-9.85z"/>
+          <use xlink:href="img/vector/sprite-logos.svg#logo-htmlacademy"></use>
         </svg>
       </a>
     </section>
@@ -259,6 +253,7 @@
 </footer>
 
 <script src="js/menu.js"></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="js/map.js"></script>
 </body>
 </html>

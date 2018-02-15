@@ -15,14 +15,14 @@
         right: 0;
         left: calc((100% - 1440px) / 2 + 760px);
         background-color: #63a73a;
-        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-image: url("../img/raster/index-background-desktop@1x.jpg");
         background-repeat: no-repeat;
         background-position: left center;
         background-size: cover;
         z-index: -1;
 
         @include retina {
-          background-image: url("../img/index-background-desktop@2x.jpg");
+          background-image: url("../img/raster/index-background-desktop@2x.jpg");
         }
       }
     }

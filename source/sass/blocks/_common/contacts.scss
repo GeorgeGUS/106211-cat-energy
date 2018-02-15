@@ -1,18 +1,30 @@
 .contacts {
   @include desktop {
     position: relative;
-    padding-left: calc((100vw - #{$desktop-width}) / 2 + #{$desktop-pads  });
     display: flex;
     align-items: center;
     height: 400px;
   }
 }
 
+.contacts__text-wrapper {
+  @include desktop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding-left: calc((100vw - #{$desktop-width}) / 2 + #{$desktop-pads  });
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
 .contacts__text-box {
-  position: relative;
   display: flex;
   padding: 26px 20px 25px;
   line-height: 20px;
+  z-index: 1;
 
   &--white {
     background-color: #ffffff;
@@ -78,37 +90,35 @@
 }
 
 .contacts__map {
-  margin-top: -38px;
-  height: 400px;
+  width: 100%;
+  height: 362px;
   background-color: #fdf7ef;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-mobile@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 51%, center;
+  background-size: 62px, cover;
 
   @include retina {
-    background-image: url("../img/bg-map-mobile@2x.png");
+    background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-mobile@2x.png");
   }
 
   @include tablet {
-    margin-top: -5px;
-    background-image: url("../img/bg-map-tablet@1x.png");
+    height: 395px;
+    background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-tablet@1x.png");
+    background-size: 124px, cover;
 
     @include retina {
-      background-image: url("../img/bg-map-tablet@2x.png");
+      background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-tablet@2x.png");
     }
   }
 
   @include desktop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 0;
-    width: 100%;
-    background-image: url("../img/bg-map-desktop@1x.png");
+    height: 400px;
+    background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-desktop@1x.png");
+    background-position: calc(71.1% + (100vw - 100%) / 2) 51%, center;
 
     @include retina {
-      background-image: url("../img/bg-map-desktop@2x.png");
+      background-image: url("../img/raster/map-pin.png"), url("../img/raster/bg-map-desktop@2x.png");
     }
   }
 }

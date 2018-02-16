@@ -20,7 +20,7 @@
 
 .slider__images {
   position: relative;
-  margin: 0 -20px;
+  margin: 0 (-$mobile-pads);
   width: 320px;
   height: 240px;
 
@@ -37,14 +37,22 @@
 
 .slider__image {
   position: absolute;
+  top: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
   overflow: hidden;
-  transition: all 0.3s linear;
+  transition: width 0.4s ease-out;
 
   &--after {
+    display: flex;
+    justify-content: flex-end;
     width: 0;
+    right: 0;
   }
+
+  //&--after {
+  //  clip: rect(auto, auto, auto, 0);
+  //}
 
   @include tablet {
     display: flex;
@@ -52,7 +60,7 @@
     width: 50%;
 
     &--after {
-      right: 0;
+      //clip: rect(auto, auto, auto, 340px);
       align-items: flex-end;
       box-shadow: 400px 570px 0 400px #eaeaea;
       background-image: linear-gradient(#ffffff 0, #ffffff 170px, #eaeaea 170px, #eaeaea 100%);
@@ -65,8 +73,9 @@
 
   @include desktop {
     &--before {
-      left: -40px;
       width: 750px;
+      left: -40px; //Отступ только для совпадения с макетом
+      padding-right: 40px; //Для компенсации отстуа
     }
 
     &--after {
@@ -105,6 +114,7 @@
   align-items: center;
   margin-top: 30px;
   padding: 2px;
+  z-index: 1;
 
   @include tablet {
     margin-top: 15px;
@@ -123,7 +133,6 @@
   text-transform: uppercase;
   color: $black;
   cursor: pointer;
-  z-index: 1;
 
   @include tablet {
     padding: 6px 0;
@@ -142,8 +151,7 @@
 }
 
 .slider__scale {
-  position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 4px 6px;
   width: 85px;
@@ -154,28 +162,26 @@
   box-sizing: border-box;
 
   @include tablet {
+    padding: 4px 0;
     width: 428px;
     height: 6px;
-    background-color: #dcdcdc;
-    border-color: #dcdcdc;
+    background-color: $border-grey;
+    border-color: $border-grey;
   }
 }
 
 .slider__grip {
-  position: relative;
-  left: 0;
   flex-shrink: 0;
-  content: "";
   display: block;
   width: 35px;
   height: 6px;
   border-radius: 3px;
   background-color: $green;
   cursor: pointer;
+  transition: margin-left 0.35s ease-out;
 
   @include tablet {
-    //margin-left: calc(50% - 16px);
-    left: calc(50% - 16px);
+    margin-left: calc(50% - 17px);
     width: 34px;
     height: 34px;
     background-image: radial-gradient($green 0, $green 4px, #ffffff 5px, #ffffff 100%);
@@ -196,9 +202,9 @@
 }
 
 .slider__before:checked ~ .slider__actions .slider__grip {
-  left: 0;
+  margin-left: 0;
 }
 
 .slider__after:checked ~ .slider__actions .slider__grip {
-  left: calc(100% - 35px);
+  margin-left: calc(100% - 34px);
 }

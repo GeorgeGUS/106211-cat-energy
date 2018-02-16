@@ -23,7 +23,6 @@ img {
 
   @include desktop {
     padding: 0 $desktop-pads;
-    width: $desktop-width;
     max-width: $desktop-width;
   }
 }

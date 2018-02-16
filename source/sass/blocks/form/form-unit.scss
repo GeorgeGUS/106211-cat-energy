@@ -244,6 +244,15 @@
   &:hover::before {
     border-color: #bababa;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  input:focus + &::before {
+    border-color: $darkgrey;
+    box-shadow: inset 0 0 0 1px $darkgrey;
+  }
 }
 
 .form-unit__label--radio::before {

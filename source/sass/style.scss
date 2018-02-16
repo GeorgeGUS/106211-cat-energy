@@ -2,11 +2,13 @@
 @import "global/variables";
 @import "global/fonts";
 @import "global/mixins";
+@import "global/animations";
 @import "global/base";
 @import "blocks/_common/theme";
 @import "blocks/_common/page-header";
 @import "blocks/_common/page-footer";
 @import "blocks/_common/page-logo";
+@import "blocks/_common/menu-toggle";
 @import "blocks/_common/page-nav";
 @import "blocks/_common/contacts";
 @import "blocks/_common/socials";

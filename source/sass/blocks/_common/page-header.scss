@@ -13,7 +13,7 @@
         top: 0;
         bottom: 0;
         right: 0;
-        left: calc((100% - 1440px) / 2 + 760px);
+        left: calc(50% + #{$desktop-pads});
         background-color: #63a73a;
         background-image: url("../img/raster/index-background-desktop@1x.jpg");
         background-repeat: no-repeat;

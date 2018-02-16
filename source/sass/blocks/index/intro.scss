@@ -81,6 +81,8 @@
   margin: 0 auto;
   margin-bottom: 2px;
   height: auto;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
 
   @include tablet {
     margin-top: -80px;

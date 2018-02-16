@@ -33,7 +33,7 @@
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
     var image = {
-      url: "../img/raster/map-pin.png",
+      url: "img/raster/map-pin.png",
       scaledSize: pinSize
     };
 

@@ -50,17 +50,12 @@
     right: 0;
   }
 
-  //&--after {
-  //  clip: rect(auto, auto, auto, 0);
-  //}
-
   @include tablet {
     display: flex;
     flex-direction: column;
     width: 50%;
 
     &--after {
-      //clip: rect(auto, auto, auto, 340px);
       align-items: flex-end;
       box-shadow: 400px 570px 0 400px #eaeaea;
       background-image: linear-gradient(#ffffff 0, #ffffff 170px, #eaeaea 170px, #eaeaea 100%);

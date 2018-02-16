@@ -1,243 +1,246 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Кэт энерджи - Подбор программы</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/picturefill.min.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Кэт энерджи - Подбор программы</title>
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/picturefill.min.js"></script>
+  </head>
+  <body>
 
-<div style="display: none">
-  <include src="build/img/vector/sprite.svg"></include>
-</div>
-
-<header class="page-header">
-  <div class="page-header__wrapper container">
-    <a class="page-logo" href="index.html">
-      <picture>
-        <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
-        <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
-      </picture>
-      <svg class="page-logo__title page-logo__title--header" xmlns="http://www.w3.org/2000/svg" width="101" height="18" aria-label="Cat Energy">
-        <use xlink:href="#logo-mobile-header"></use>
-      </svg>
-    </a>
-    <nav class="page-nav page-nav--no-js">
-      <button class="page-nav__toggle menu-toggle" type="button">Показать меню</button>
-      <ul class="page-nav__list">
-        <li class="page-nav__item"><a class="page-nav__link" href="index.html">Главная</a></li>
-        <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
-        <li class="page-nav__item"><a class="page-nav__link page-nav__link--active">Подбор программы</a></li>
-      </ul>
-    </nav>
+  <div style="display: none">
+    <include src="build/img/vector/sprite.svg"></include>
   </div>
-</header>
 
-<main class="theme">
-  <h1 class="visually-hidden">Cat Energy</h1>
-
-  <form class="program-form" action="http://echo.htmlacademy.ru" method="post">
-    <div class="container">
-      <h2 class="theme__title theme__title--top">Подбор программы</h2>
-      <p class="program-form__text">
-        Заполните анкету и мы подберем <br> программу питания для вашего кота
-      </p>
-    </div>
-
-    <div class="program-form__wrapper container">
-      <section class="form-unit form-unit--no-title">
-        <h3 class="visually-hidden">Введите личные данные кота</h3>
-        <p class="form-unit__row">
-          <label class="form-unit__item theme__block-title">
-            <span class="form-unit__label">Имя:*</span>
-            <input type="text" class="form-unit__input" name="Имя" placeholder="Барсик" required>
-          </label>
-        </p>
-        <p class="form-unit__row">
-          <label class="form-unit__item theme__block-title">
-            <span class="form-unit__label">Вес (кг):*</span>
-            <input type="text" class="form-unit__input" name="Вес" placeholder="7" required>
-          </label>
-        </p>
-        <p class="form-unit__row">
-          <label class="form-unit__item theme__block-title">
-            <span class="form-unit__label">Возраст (лет):</span>
-            <input type="text" class="form-unit__input" name="Возраст" placeholder="7">
-          </label>
-        </p>
-      </section>
-
-      <section class="form-unit form-unit--bordered">
-        <h3 class="visually-hidden">Выберите программу</h3>
-        <ul class="form-unit__list">
-          <li class="form-unit__list-item">
-            <label class="form-unit__item theme__block-title">
-              <input type="radio" name="Программа" value="Похудение" class="form-unit__radio visually-hidden" checked>
-              <span class="form-unit__label form-unit__label--radio">Похудение</span>
-            </label>
-          </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item theme__block-title">
-              <input type="radio" name="Программа" value="Набор массы" class="form-unit__radio visually-hidden">
-              <span class="form-unit__label form-unit__label--radio">Набор массы</span>
-            </label>
-          </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item theme__block-title">
-              <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)" class="form-unit__radio visually-hidden">
-              <span class="form-unit__label form-unit__label--radio">Не знаю (Нужен ваш совет)</span>
-            </label>
-          </li>
+  <header class="page-header">
+    <div class="page-header__wrapper container">
+      <a class="page-logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/vector/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
+          <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
+        </picture>
+        <svg class="page-logo__title page-logo__title--header" xmlns="http://www.w3.org/2000/svg" width="101" height="18" aria-label="Cat Energy">
+          <use xlink:href="#logo-mobile-header"></use>
+        </svg>
+      </a>
+      <nav class="page-nav page-nav--no-js">
+        <button class="page-nav__toggle menu-toggle" type="button">Показать меню</button>
+        <ul class="page-nav__list">
+          <li class="page-nav__item"><a class="page-nav__link" href="index.html">Главная</a></li>
+          <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Каталог продукции</a></li>
+          <li class="page-nav__item"><a class="page-nav__link page-nav__link--active">Подбор программы</a></li>
         </ul>
-      </section>
+      </nav>
     </div>
+  </header>
 
-    <section class="form-unit">
-      <h3 class="form-unit__title theme__subtitle"><span>Контактные данные <br> (владельца кота)</span></h3>
+  <main class="theme">
+    <h1 class="visually-hidden">Cat Energy</h1>
+
+    <form class="program-form" action="http://echo.htmlacademy.ru" method="post">
+      <div class="container">
+        <h2 class="theme__title theme__title--top">Подбор программы</h2>
+        <p class="program-form__text">
+          Заполните анкету и мы подберем <br> программу питания для вашего кота
+        </p>
+      </div>
+
       <div class="program-form__wrapper container">
-        <p class="form-unit__row">
-          <label class="form-unit__item theme__block-title">
-            <span class="form-unit__label">E-mail:*</span>
-            <span class="form-unit__input-wrapper">
-              <input type="email" class="form-unit__input" name="E-mail" placeholder="kuklachev@gmail.com" required>
-              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13">
-                <use xlink:href="#icon-mail"></use>
-              </svg>
-            </span>
-          </label>
-        </p>
-        <p class="form-unit__row">
-          <label class="form-unit__item theme__block-title">
-            <span class="form-unit__label">Телефон:*</span>
-            <span class="form-unit__input-wrapper">
-              <input type="tel" class="form-unit__input" name="Телефон" placeholder="8 (960) 900-60-90" required>
-              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <use xlink:href="#icon-phone"></use>
-              </svg>
-            </span>
-          </label>
-        </p>
-      </div>
-    </section>
+        <section class="form-unit form-unit--no-title">
+          <h3 class="visually-hidden">Введите личные данные кота</h3>
+          <p class="form-unit__row">
+            <label class="form-unit__item theme__block-title">
+              <span class="form-unit__label">Имя:*</span>
+              <input type="text" class="form-unit__input" name="Имя" placeholder="Барсик" required>
+            </label>
+          </p>
+          <p class="form-unit__row">
+            <label class="form-unit__item theme__block-title">
+              <span class="form-unit__label">Вес (кг):*</span>
+              <input type="text" class="form-unit__input" name="Вес" placeholder="7" required>
+            </label>
+          </p>
+          <p class="form-unit__row">
+            <label class="form-unit__item theme__block-title">
+              <span class="form-unit__label">Возраст (лет):</span>
+              <input type="text" class="form-unit__input" name="Возраст" placeholder="7">
+            </label>
+          </p>
+        </section>
 
-    <section class="form-unit">
-      <h3 class="form-unit__title theme__subtitle"><span>Комментарий</span></h3>
-      <div class="container">
-        <p class="form-unit__row form-unit__row--textarea">
-          <label class="form-unit__item theme__block-title">
-            <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий" cols="28" rows="4"
-                      placeholder="Расскажите обо всех повадках кота"></textarea>
-          </label>
-        </p>
+        <section class="form-unit form-unit--bordered">
+          <h3 class="visually-hidden">Выберите программу</h3>
+          <ul class="form-unit__list">
+            <li class="form-unit__list-item">
+              <label class="form-unit__item theme__block-title">
+                <input type="radio" name="Программа" value="Похудение" class="form-unit__radio visually-hidden" checked>
+                <span class="form-unit__label form-unit__label--radio">Похудение</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item theme__block-title">
+                <input type="radio" name="Программа" value="Набор массы" class="form-unit__radio visually-hidden">
+                <span class="form-unit__label form-unit__label--radio">Набор массы</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item theme__block-title">
+                <input type="radio" name="Программа" value="Не знаю (Нужен ваш совет)" class="form-unit__radio visually-hidden">
+                <span class="form-unit__label form-unit__label--radio">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </section>
       </div>
-    </section>
 
-    <section class="form-unit">
-      <h3 class="form-unit__title form-unit__title--last theme__subtitle"><span>Дополнительно</span></h3>
-      <div class="container">
-        <ul class="form-unit__list form-unit__list--checks">
-          <li class="form-unit__list-item">
+      <section class="form-unit">
+        <h3 class="form-unit__title theme__subtitle"><span>Контактные данные <br> (владельца кота)</span></h3>
+        <div class="program-form__wrapper container">
+          <p class="form-unit__row">
             <label class="form-unit__item theme__block-title">
-              <input type="checkbox" name="sweetener" class="form-unit__checkbox visually-hidden" checked>
-              <span class="form-unit__label form-unit__label--checkbox">Сахарозаменитель</span>
+              <span class="form-unit__label">E-mail:*</span>
+              <span class="form-unit__input-wrapper">
+                <input type="email" class="form-unit__input" name="E-mail" placeholder="kuklachev@gmail.com" required>
+                <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13">
+                  <use xlink:href="#icon-mail"></use>
+                </svg>
+              </span>
             </label>
+          </p>
+          <p class="form-unit__row">
+            <label class="form-unit__item theme__block-title">
+              <span class="form-unit__label">Телефон:*</span>
+              <span class="form-unit__input-wrapper">
+                <input type="tel" class="form-unit__input" name="Телефон" placeholder="8 (960) 900-60-90" required>
+                <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+              </span>
+            </label>
+          </p>
+        </div>
+      </section>
+
+      <section class="form-unit">
+        <h3 class="form-unit__title theme__subtitle"><span>Комментарий</span></h3>
+        <div class="container">
+          <p class="form-unit__row form-unit__row--textarea">
+            <label class="form-unit__item theme__block-title">
+              <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий" cols="28" rows="4"
+                        placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
+          </p>
+        </div>
+      </section>
+
+      <section class="form-unit">
+        <h3 class="form-unit__title form-unit__title--last theme__subtitle"><span>Дополнительно</span></h3>
+        <div class="container">
+          <ul class="form-unit__list form-unit__list--checks">
+            <li class="form-unit__list-item">
+              <label class="form-unit__item theme__block-title">
+                <input type="checkbox" name="sweetener" class="form-unit__checkbox visually-hidden" checked>
+                <span class="form-unit__label form-unit__label--checkbox">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item theme__block-title">
+                <input type="checkbox" name="water" class="form-unit__checkbox visually-hidden">
+                <span class="form-unit__label form-unit__label--checkbox">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item theme__block-title">
+                <input type="checkbox" name="milk" class="form-unit__checkbox visually-hidden">
+                <span class="form-unit__label form-unit__label--checkbox">Молоко</span>
+              </label>
+            </li>
+            <li class="form-unit__list-item">
+              <label class="form-unit__item theme__block-title">
+                <input type="checkbox" name="vitamins" class="form-unit__checkbox visually-hidden">
+                <span class="form-unit__label form-unit__label--checkbox">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="program-form__footer container">
+        <button class="program-form__submit-btn theme__btn">Отправить заявку</button>
+        <p class="program-form__footnote theme__text"><sup>*</sup> — Обязательные поля</p>
+      </footer>
+    </form>
+  </main>
+
+  <footer class="page-footer">
+    <div class="contacts">
+      <div class="contacts__text-wrapper">
+        <div class="contacts__text-box">
+          <p class="contacts__half contacts__greeting theme__block-title">
+            Приглашаем к&nbsp;сотрудничеству дилеров!
+          </p>
+          <p class="contacts__half contacts__address theme__text">
+            ул. Большая Конюшенная, д. 19/8
+            <span class="contacts__city">Санкт-Петербург</span>
+          </p>
+        </div>
+      </div>
+      <div class="contacts__map" id="map"></div>
+    </div>
+
+    <div class="page-footer__bottom container">
+      <div class="page-footer__item page-logo page-logo--footer">
+        <a href="index.html" class="page-logo__title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" aria-label="Cat Energy">
+            <use xlink:href="#logo-footer"></use>
+          </svg>
+        </a>
+      </div>
+      <section class="page-footer__item socials">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">Вконтакте
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                <use xlink:href="#icon-vk-mobile"></use>
+              </svg>
+            </a>
           </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item theme__block-title">
-              <input type="checkbox" name="water" class="form-unit__checkbox visually-hidden">
-              <span class="form-unit__label form-unit__label--checkbox">Питьевая вода</span>
-            </label>
+          <li class="socials__item">
+            <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                <use xlink:href="#icon-insta-mobile"></use>
+              </svg>
+            </a>
           </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item theme__block-title">
-              <input type="checkbox" name="milk" class="form-unit__checkbox visually-hidden">
-              <span class="form-unit__label form-unit__label--checkbox">Молоко</span>
-            </label>
-          </li>
-          <li class="form-unit__list-item">
-            <label class="form-unit__item theme__block-title">
-              <input type="checkbox" name="vitamins" class="form-unit__checkbox visually-hidden">
-              <span class="form-unit__label form-unit__label--checkbox">Витамины</span>
-            </label>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
+                <use xlink:href="#icon-fb-mobile"></use>
+              </svg>
+            </a>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <footer class="program-form__footer container">
-      <button class="program-form__submit-btn theme__btn">Отправить заявку</button>
-      <p class="program-form__footnote theme__text"><sup>*</sup> — Обязательные поля</p>
-    </footer>
-  </form>
-</main>
-
-<footer class="page-footer">
-  <div class="contacts">
-    <div class="contacts__text-wrapper">
-      <div class="contacts__text-box">
-        <p class="contacts__half contacts__greeting theme__block-title">
-          Приглашаем к&nbsp;сотрудничеству дилеров!
-        </p>
-        <p class="contacts__half contacts__address theme__text">
-          ул. Большая Конюшенная, д. 19/8
-          <span class="contacts__city">Санкт-Петербург</span>
-        </p>
-      </div>
+      </section>
+      <section class="page-footer__item rights-owner">
+        <h2 class="visually-hidden">Правообладатель</h2>
+        <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </section>
     </div>
-    <div class="contacts__map" id="map"></div>
-  </div>
+  </footer>
 
-  <div class="page-footer__bottom container">
-    <div class="page-footer__item page-logo page-logo--footer">
-      <a href="index.html" class="page-logo__title">
-        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" aria-label="Cat Energy">
-          <use xlink:href="#logo-footer"></use>
-        </svg>
-      </a>
-    </div>
-    <section class="page-footer__item socials">
-      <h2 class="visually-hidden">Мы в социальных сетях</h2>
-      <ul class="socials__list">
-        <li class="socials__item">
-          <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">Вконтакте
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-              <use xlink:href="#icon-vk-mobile"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <use xlink:href="#icon-insta-mobile"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
-            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
-              <use xlink:href="#icon-fb-mobile"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="page-footer__item rights-owner">
-      <h2 class="visually-hidden">Правообладатель</h2>
-      <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
-        HTML Academy
-        <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
-          <use xlink:href="#logo-htmlacademy"></use>
-        </svg>
-      </a>
-    </section>
-  </div>
-</footer>
-
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-<script src="js/menu.min.js"></script>
-<script src="js/map.min.js"></script>
-</body>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script src="js/menu.min.js"></script>
+  <script src="js/map.min.js"></script>
+  </body>
 </html>

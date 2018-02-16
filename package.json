@@ -9,6 +9,7 @@
     "browser-sync": "2.23.x",
     "css-mqpacker": "^6.0.2",
     "del": "^3.0.0",
+    "gh-pages": "^1.1.0",
     "gulp": "3.9.x",
     "gulp-csscomb": "^3.0.8",
     "gulp-csso": "^3.0.1",
@@ -36,7 +37,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "start": "npm run build && gulp serve",
+    "deploy": "gh-pages -d build"
   },
   "pre-commit": "test",
   "browserslist": [

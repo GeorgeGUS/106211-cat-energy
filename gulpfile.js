@@ -27,6 +27,7 @@ var svgmin = require('gulp-svgmin');
 
 var run = require("run-sequence");
 var server = require("browser-sync").create();
+var ghpages = require('gh-pages');
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
@@ -130,3 +131,5 @@ gulp.task("serve", function () {
 gulp.task("build", function (done) {
   run("clean", "copy", "svg", "sprite", "html", "style","script", "webp", "images", done);
 });
+
+ghpages.publish("build");

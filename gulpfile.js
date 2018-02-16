@@ -18,6 +18,7 @@ var uglify = require("gulp-uglify");
 
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require('gulp-htmlmin');
 
 var webp = require("gulp-webp");
 var imagemin = require("gulp-imagemin");
@@ -33,6 +34,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(gulp.dest("build"))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build"));
 });
 

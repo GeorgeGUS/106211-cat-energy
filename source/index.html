@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Кэт энерджи - Главная</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/picturefill.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
+
+  <div style="display: none">
+    <include src="build/img/vector/sprite.svg"></include>
+  </div>
 
   <header class="page-header page-header--index">
     <div class="page-header__wrapper container">
@@ -17,7 +21,9 @@
           <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
           <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
         </picture>
-        <img class="page-logo__title page-logo__title--header" src="img/vector/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+        <svg class="page-logo__title page-logo__title--header" xmlns="http://www.w3.org/2000/svg" width="101" height="18" aria-label="Cat Energy">
+          <use xlink:href="#logo-mobile-header"></use>
+        </svg>
       </a>
       <nav class="page-nav page-nav--no-js">
         <button class="page-nav__toggle" type="button">Показать меню</button>
@@ -189,8 +195,8 @@
     <div class="page-footer__bottom container">
       <div class="page-footer__item page-logo page-logo--index page-logo--footer">
         <a class="page-logo__title">
-          <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24">
-            <use xlink:href="img/vector/sprite-logos.svg#logo-footer"></use>
+          <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" aria-label="Cat Energy">
+            <use xlink:href="#logo-footer"></use>
           </svg>
         </a>
       </div>
@@ -200,21 +206,21 @@
           <li class="socials__item">
             <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">Вконтакте
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-                <use xlink:href="img/vector/sprite-icons.svg#icon-vk-mobile"></use>
+                <use xlink:href="#icon-vk-mobile"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-                <use xlink:href="img/vector/sprite-icons.svg#icon-insta-mobile"></use>
+                <use xlink:href="#icon-insta-mobile"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
-                <use xlink:href="img/vector/sprite-icons.svg#icon-fb-mobile"></use>
+                <use xlink:href="#icon-fb-mobile"></use>
               </svg>
             </a>
           </li>
@@ -225,15 +231,16 @@
         <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
           <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
-            <use xlink:href="img/vector/sprite-logos.svg#logo-htmlacademy"></use>
+            <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
       </section>
     </div>
   </footer>
 
-  <script src="js/menu.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-  <script src="js/map.js"></script>
+  <script src="js/menu.min.js"></script>
+  <script src="js/map.min.js"></script>
+
   </body>
 </html>

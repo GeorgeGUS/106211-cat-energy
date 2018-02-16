@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи - Подбор программы</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/picturefill.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </head>
 <body>
+
+<div style="display: none">
+  <include src="build/img/vector/sprite.svg"></include>
+</div>
 
 <header class="page-header">
   <div class="page-header__wrapper container">
@@ -17,7 +21,9 @@
         <source media="(min-width: 768px)" srcset="img/vector/logo-tablet.svg">
         <img class="page-logo__image" src="img/vector/logo-mobile.svg" alt="Супер-кот (лого)" width="33" height="38">
       </picture>
-      <img class="page-logo__title page-logo__title--header" src="img/vector/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+      <svg class="page-logo__title page-logo__title--header" xmlns="http://www.w3.org/2000/svg" width="101" height="18" aria-label="Cat Energy">
+        <use xlink:href="#logo-mobile-header"></use>
+      </svg>
     </a>
     <nav class="page-nav page-nav--no-js">
       <button class="page-nav__toggle" type="button">Показать меню</button>
@@ -97,7 +103,9 @@
             <span class="form-unit__label">E-mail:*</span>
             <span class="form-unit__input-wrapper">
               <input type="email" class="form-unit__input" name="E-mail" placeholder="kuklachev@gmail.com" required>
-              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13"><path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/></svg>
+              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
             </span>
           </label>
         </p>
@@ -106,7 +114,9 @@
             <span class="form-unit__label">Телефон:*</span>
             <span class="form-unit__input-wrapper">
               <input type="tel" class="form-unit__input" name="Телефон" placeholder="8 (960) 900-60-90" required>
-              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1A3 3 0 0 0 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/></svg>
+              <svg class="form-unit__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
             </span>
           </label>
         </p>
@@ -118,7 +128,8 @@
       <div class="container">
         <p class="form-unit__row form-unit__row--textarea">
           <label class="form-unit__item theme__block-title">
-            <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий" cols="28" rows="4" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form-unit__input form-unit__input--textarea" name="Комментарий" cols="28" rows="4"
+                      placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </p>
       </div>
@@ -182,7 +193,9 @@
   <div class="page-footer__bottom container">
     <div class="page-footer__item page-logo page-logo--footer">
       <a href="index.html" class="page-logo__title">
-        <img src="img/vector/logo-footer.svg" alt="Cat Energy" width="128" height="24">
+        <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" aria-label="Cat Energy">
+          <use xlink:href="#logo-footer"></use>
+        </svg>
       </a>
     </div>
     <section class="page-footer__item socials">
@@ -191,21 +204,21 @@
         <li class="socials__item">
           <a class="socials__link socials__link--vk" href="https://vk.com/htmlacademy">Вконтакте
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22">
-              <use xlink:href="img/vector/sprite-icons.svg#icon-vk-mobile"></use>
+              <use xlink:href="#icon-vk-mobile"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link socials__link--ig" href="https://www.instagram.com/htmlacademy">Instagram
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-              <use xlink:href="img/vector/sprite-icons.svg#icon-insta-mobile"></use>
+              <use xlink:href="#icon-insta-mobile"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link socials__link--fb" href="https://www.facebook.com/htmlacademy">Facebook
             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="19">
-              <use xlink:href="img/vector/sprite-icons.svg#icon-fb-mobile"></use>
+              <use xlink:href="#icon-fb-mobile"></use>
             </svg>
           </a>
         </li>
@@ -216,15 +229,15 @@
       <a class="rights-owner__link" href="https://htmlacademy.ru/intensive/adaptive">
         HTML Academy
         <svg class="rights-owner__logo" xmlns="http://www.w3.org/2000/svg" width="26.94" height="34.09">
-          <use xlink:href="img/vector/sprite-logos.svg#logo-htmlacademy"></use>
+          <use xlink:href="#logo-htmlacademy"></use>
         </svg>
       </a>
     </section>
   </div>
 </footer>
 
-<script src="js/menu.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-<script src="js/map.js"></script>
+<script src="js/menu.min.js"></script>
+<script src="js/map.min.js"></script>
 </body>
 </html>

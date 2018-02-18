@@ -1,8 +1,11 @@
 .intro {
-  background:
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image:
     linear-gradient(to top, #ffffff 97px, transparent 97px),
-    url("../img/raster/index-background-mobile@1x.jpg") no-repeat top,
+    url("../img/raster/index-background-mobile@1x.jpg"),
     linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  background-color: #61a63c;
   background-size: 100%;
 
   @include retina {

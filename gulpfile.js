@@ -14,6 +14,7 @@ var autoprefixer = require("autoprefixer");
 var csscomb = require("gulp-csscomb");
 var csso = require("gulp-csso");
 
+var concat = require('gulp-concat');
 var uglify = require("gulp-uglify");
 
 var posthtml = require("gulp-posthtml");
@@ -32,13 +33,22 @@ var ghpages = require('gh-pages');
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(posthtml([
       include()
     ]))
+    // .pipe(gulp.dest("build"))
+    .pipe(htmlmin({
+      minifyJS: true,
+      minifyURLs: true,
+      collapseWhitespace: true,
+      removeComments: true,
+      sortAttributes: true,
+      sortClassName: true
+    }))
+    // .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build"))
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(rename({suffix: ".min"}))
-    .pipe(gulp.dest("build"));
+    .pipe(sourcemaps.write());
 });
 
 gulp.task("style", function () {
@@ -58,28 +68,41 @@ gulp.task("style", function () {
     .pipe(server.stream());
 });
 
-gulp.task("script", function (cb) {
+gulp.task("script-min", function (cb) {
   pump([
-    gulp.src("source/js/*.js"),
-    sourcemaps.init(),
+    gulp.src("source/js/**/*.js"),
     uglify(),
     rename({suffix: ".min"}),
-    sourcemaps.write(),
     gulp.dest("build/js")
   ], cb);
 });
 
-gulp.task("images", function () {
-  return gulp.src("source/img/raster/*.{jpg,png}")
+gulp.task("script-concat", function (cb) {
+  pump([
+    gulp.src("build/js/*.js"),
+    concat('main.min.js'),
+    gulp.dest("build/js")
+  ], cb);
+});
+
+gulp.task("images-jpg", function () {
+  return gulp.src("source/img/raster/*.jpg")
     .pipe(imagemin([
-      imagemin.jpegtran({progressive: true}),
+      imagemin.jpegtran({progressive: true})
+    ]))
+    .pipe(gulp.dest("build/img/raster"));
+});
+
+gulp.task("images-png", function () {
+  return gulp.src("source/img/raster/*.png")
+    .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3})
     ]))
     .pipe(gulp.dest("build/img/raster"));
 });
 
 gulp.task("webp", function () {
-  return gulp.src("source/img/raster/*.{jpg,png}")
+  return gulp.src("build/img/raster/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img/webp"));
 });
@@ -124,12 +147,25 @@ gulp.task("serve", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
-  gulp.watch("source/js/*.js", ["script"]).on("change", server.reload);
+  gulp.watch("source/js/*.js", ["script-min"]).on("change", server.reload);
 });
 
 
 gulp.task("build", function (done) {
-  run("clean", "copy", "svg", "sprite", "html", "style","script", "webp", "images", done);
+  run(
+    "clean",
+    "copy",
+    "svg",
+    "sprite",
+    "html",
+    "style",
+    "script-min",
+    "script-concat",
+    "images-jpg",
+    "images-png",
+    "webp",
+    done
+  );
 });
 
 ghpages.publish("build");

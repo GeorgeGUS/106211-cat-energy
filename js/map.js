@@ -43,4 +43,4 @@ function initialize() {
   });
 }
 
-google.maps.event.addDomListener(window, "resize", debounce(initialize, 1000));
+window.addEventListener("resize", debounce(initialize, 1000));

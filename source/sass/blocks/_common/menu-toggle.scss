@@ -1,14 +1,13 @@
 .menu-toggle {
   position: relative;
-  padding: 0;
+  padding: 32px;
   margin: 0;
-  width: 18px;
-  height: 18px;
+  width: 0;
+  height: 0;
   border: none;
   background-color: transparent;
   font-size: 0;
   cursor: pointer;
-  overflow: hidden;
 
   &::before,
   &::after {
@@ -22,7 +21,7 @@
     height: 2px;
     background-color: $black;
     box-shadow: 0 -6px $black, 0 6px $black;
-    transition: all 0.1s ease-out;
+    transition: all 0.2s ease-out;
   }
 }
 

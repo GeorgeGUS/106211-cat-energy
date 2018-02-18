@@ -1,7 +1,17 @@
+.page-nav {
+  margin: 0 -20px;
+  border-top: 1px solid #e6e6e6;
+
+  @include tablet {
+    border-top: none;
+    margin: 0 -18px;
+  }
+}
+
 .page-nav__toggle {
   position: absolute;
-  top: 23px;
-  right: 23px;
+  top: 0;
+  right: 0;
 
   .page-nav--no-js & {
     display: none;
@@ -14,7 +24,7 @@
 
 .page-nav__list {
   display: none;
-  margin: 0 -20px;
+  margin: 0;
   padding: 0;
   list-style: none;
 
@@ -30,7 +40,6 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -18px;
   }
 
   @include desktop {
@@ -40,18 +49,10 @@
 }
 
 .page-nav__item {
-  border-top: 1px solid #e6e6e6;
-
-  &:last-child {
-    border-bottom: 1px solid #e6e6e6;
-  }
+  border-bottom: 1px solid #e6e6e6;
 
   @include tablet {
-    border-top: none;
-
-    &:last-child {
-      border-bottom: none;
-    }
+    border-bottom: none;
   }
 }
 

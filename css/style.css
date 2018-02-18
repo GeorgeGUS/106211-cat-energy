@@ -882,11 +882,10 @@ input:disabled .theme__btn {
 .menu-toggle {
   position: relative;
 
-  width: 18px;
-  height: 18px;
+  width: 0;
+  height: 0;
   margin: 0;
-  padding: 0;
-  overflow: hidden; 
+  padding: 32px;
 
   font-size: 0;
 
@@ -911,8 +910,8 @@ input:disabled .theme__btn {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 
-  -webkit-transition: all 0.1s ease-out;
-          transition: all 0.1s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
 }
 
 .page-nav--opened .menu-toggle::before,
@@ -931,10 +930,23 @@ input:disabled .theme__btn {
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.page-nav {
+  margin: 0 -20px;
+
+  border-top: 1px solid #e6e6e6;
+}
+@media (min-width: 768px) {
+  .page-nav {
+    margin: 0 -18px; 
+
+    border-top: none;
+  }
+}
+
 .page-nav__toggle {
   position: absolute;
-  top: 23px;
-  right: 23px;
+  top: 0;
+  right: 0;
 }
 .page-nav--no-js .page-nav__toggle {
   display: none;
@@ -947,7 +959,7 @@ input:disabled .theme__btn {
 
 .page-nav__list {
   display: none;
-  margin: 0 -20px;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -969,8 +981,7 @@ input:disabled .theme__btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-        flex-wrap: wrap;
-    margin: 0 -18px; 
+        flex-wrap: wrap; 
 
     -ms-flex-wrap: wrap;
   }
@@ -986,16 +997,10 @@ input:disabled .theme__btn {
 }
 
 .page-nav__item {
-  border-top: 1px solid #e6e6e6;
-}
-.page-nav__item:last-child {
   border-bottom: 1px solid #e6e6e6;
 }
 @media (min-width: 768px) {
   .page-nav__item {
-    border-top: none;
-  }
-  .page-nav__item:last-child {
     border-bottom: none;
   }
 }
@@ -1345,7 +1350,10 @@ input:disabled .theme__btn {
 }
 
 .intro {
-  background: linear-gradient(to top, #ffffff 97px, transparent 97px), url("../img/raster/index-background-mobile@1x.jpg") no-repeat top, linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  background-color: #61a63c;
+  background-image: linear-gradient(to top, #ffffff 97px, transparent 97px), url("../img/raster/index-background-mobile@1x.jpg"), linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  background-repeat: no-repeat;
+  background-position: top;
   background-size: 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {

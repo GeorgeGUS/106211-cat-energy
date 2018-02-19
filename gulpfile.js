@@ -22,6 +22,7 @@ var include = require("posthtml-include");
 var htmlmin = require('gulp-htmlmin');
 
 var webp = require("gulp-webp");
+const image = require('gulp-image');
 var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var svgmin = require('gulp-svgmin');
@@ -84,6 +85,25 @@ gulp.task("script-concat", function (cb) {
   ], cb);
 });
 
+
+gulp.task('images', function () {
+  gulp.src('source/img/raster/*.{jpg,png}')
+    .pipe(image())
+    // .pipe(image({
+    //   pngquant: true,
+    //   optipng: false,
+    //   zopflipng: true,
+    //   jpegRecompress: false,
+    //   mozjpeg: true,
+    //   guetzli: false,
+    //   gifsicle: false,
+    //   svgo: false,
+    //   concurrent: 10
+    //   // quiet: true // defaults to false
+    // }))
+    .pipe(gulp.dest('build/img/raster'));
+});
+
 gulp.task("images-jpg", function () {
   return gulp.src("source/img/raster/*.jpg")
     .pipe(imagemin([
@@ -101,8 +121,11 @@ gulp.task("images-png", function () {
 });
 
 gulp.task("webp", function () {
-  return gulp.src("build/img/raster/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
+  return gulp.src("source/img/raster/*.{jpg,png}")
+    .pipe(webp({
+      quality: 85,
+      method: 5
+    }))
     .pipe(gulp.dest("build/img/webp"));
 });
 
@@ -154,15 +177,16 @@ gulp.task("build", function (done) {
   run(
     "clean",
     "copy",
+    "webp",
+    "images",
     "svg",
     "sprite",
     "html",
     "style",
     "script-min",
     "script-concat",
-    "images-jpg",
-    "images-png",
-    "webp",
+    // "images-jpg",
+    // "images-png",
     done
   );
 });

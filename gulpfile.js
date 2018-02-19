@@ -37,7 +37,6 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    // .pipe(gulp.dest("build"))
     .pipe(htmlmin({
       minifyJS: true,
       minifyURLs: true,
@@ -46,7 +45,6 @@ gulp.task("html", function () {
       sortAttributes: true,
       sortClassName: true
     }))
-    // .pipe(rename({suffix: ".min"}))
     .pipe(gulp.dest("build"))
     .pipe(sourcemaps.write());
 });
@@ -79,8 +77,9 @@ gulp.task("script-min", function (cb) {
 
 gulp.task("script-concat", function (cb) {
   pump([
-    gulp.src("build/js/*.js"),
-    concat('main.min.js'),
+    gulp.src(["source/js/menu.js","source/js/map.js"]),
+    uglify(),
+    concat("main.min.js"),
     gulp.dest("build/js")
   ], cb);
 });
@@ -147,7 +146,7 @@ gulp.task("serve", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
-  gulp.watch("source/js/*.js", ["script-min"]).on("change", server.reload);
+  gulp.watch("source/js/*.js", ["script-min", "script-concat"]).on("change", server.reload);
 });
 
 

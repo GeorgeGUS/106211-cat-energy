@@ -22,8 +22,7 @@ var include = require("posthtml-include");
 var htmlmin = require('gulp-htmlmin');
 
 var webp = require("gulp-webp");
-const image = require('gulp-image');
-var imagemin = require("gulp-imagemin");
+var image = require('gulp-image');
 var svgstore = require("gulp-svgstore");
 var svgmin = require('gulp-svgmin');
 
@@ -85,39 +84,10 @@ gulp.task("script-concat", function (cb) {
   ], cb);
 });
 
-
 gulp.task('images', function () {
   gulp.src('source/img/raster/*.{jpg,png}')
     .pipe(image())
-    // .pipe(image({
-    //   pngquant: true,
-    //   optipng: false,
-    //   zopflipng: true,
-    //   jpegRecompress: false,
-    //   mozjpeg: true,
-    //   guetzli: false,
-    //   gifsicle: false,
-    //   svgo: false,
-    //   concurrent: 10
-    //   // quiet: true // defaults to false
-    // }))
     .pipe(gulp.dest('build/img/raster'));
-});
-
-gulp.task("images-jpg", function () {
-  return gulp.src("source/img/raster/*.jpg")
-    .pipe(imagemin([
-      imagemin.jpegtran({progressive: true})
-    ]))
-    .pipe(gulp.dest("build/img/raster"));
-});
-
-gulp.task("images-png", function () {
-  return gulp.src("source/img/raster/*.png")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3})
-    ]))
-    .pipe(gulp.dest("build/img/raster"));
 });
 
 gulp.task("webp", function () {
@@ -185,8 +155,6 @@ gulp.task("build", function (done) {
     "style",
     "script-min",
     "script-concat",
-    // "images-jpg",
-    // "images-png",
     done
   );
 });

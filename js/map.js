@@ -39,7 +39,7 @@
     var beachMarker = new google.maps.Marker({
       position: pinCenter,
       map: map,
-      optimized: false,
+      optimized: true,
       icon: image
     });
   };

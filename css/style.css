@@ -948,7 +948,7 @@ input:disabled .theme__btn {
   top: 0;
   right: 0;
 }
-.page-nav--no-js .page-nav__toggle {
+.no-js .page-nav__toggle {
   display: none;
 }
 @media (min-width: 768px) {
@@ -964,12 +964,12 @@ input:disabled .theme__btn {
 
   list-style: none;
 }
-.page-nav--no-js .page-nav__list,
+.no-js .page-nav__list,
 .page-nav--opened .page-nav__list {
   display: block;
 }
 @media (min-width: 768px) {
-  .page-nav--no-js .page-nav__list,
+  .no-js .page-nav__list,
   .page-nav--opened .page-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;

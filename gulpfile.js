@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var del = require("del");
 var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
+var changed = require('gulp-changed');
 
 var plumber = require("gulp-plumber");
 var pump = require('pump');
@@ -84,19 +85,32 @@ gulp.task("script", ["script-min"], function (cb) {
   ], cb);
 });
 
-gulp.task('images', function () {
-  gulp.src('source/img/raster/*.{jpg,png}')
-    .pipe(image())
-    .pipe(gulp.dest('build/img/raster'));
-});
-
 gulp.task("webp", function () {
   return gulp.src("source/img/raster/*.{jpg,png}")
-    .pipe(webp({
-      quality: 85,
-      method: 5
+    .pipe(changed("source/img/compressed/webp", {
+      extension: '.webp'
     }))
-    .pipe(gulp.dest("build/img/webp"));
+    .pipe(webp({
+      quality: 90,
+      method: 4
+    }))
+    .pipe(gulp.dest("source/img/compressed/webp"));
+});
+
+gulp.task("images", function () {
+  gulp.src('source/img/raster/*.{jpg,png}')
+    .pipe(changed('source/img/compressed/raster'))
+    .pipe(image())
+    .pipe(gulp.dest('source/img/compressed/raster'));
+});
+
+gulp.task("copy-images", function () {
+  return gulp.src([
+    "source/img/compressed/**/*.*"
+  ], {
+    base: "source/img/compressed"
+  })
+    .pipe(gulp.dest("build/img/"));
 });
 
 gulp.task("svg", function () {
@@ -152,7 +166,7 @@ gulp.task("build", function (done) {
     "copy",
     "webp",
     "images",
-    "svg",
+    "copy-images",
     "sprite",
     "html",
     "del-sprite",

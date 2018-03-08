@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var del = require("del");
 var rename = require("gulp-rename");
 var sourcemaps = require("gulp-sourcemaps");
+var changed = require('gulp-changed');
 
 var plumber = require("gulp-plumber");
 var pump = require('pump');
@@ -75,7 +76,7 @@ gulp.task("script-min", function (cb) {
   ], cb);
 });
 
-gulp.task("script-concat", function (cb) {
+gulp.task("script", ["script-min"], function (cb) {
   pump([
     gulp.src(["source/js/menu.js","source/js/map.js"]),
     uglify(),
@@ -84,19 +85,32 @@ gulp.task("script-concat", function (cb) {
   ], cb);
 });
 
-gulp.task('images', function () {
-  gulp.src('source/img/raster/*.{jpg,png}')
-    .pipe(image())
-    .pipe(gulp.dest('build/img/raster'));
-});
-
 gulp.task("webp", function () {
   return gulp.src("source/img/raster/*.{jpg,png}")
-    .pipe(webp({
-      quality: 85,
-      method: 5
+    .pipe(changed("source/img/compressed/webp", {
+      extension: '.webp'
     }))
-    .pipe(gulp.dest("build/img/webp"));
+    .pipe(webp({
+      quality: 90,
+      method: 4
+    }))
+    .pipe(gulp.dest("source/img/compressed/webp"));
+});
+
+gulp.task("images", function () {
+  gulp.src('source/img/raster/*.{jpg,png}')
+    .pipe(changed('source/img/compressed/raster'))
+    .pipe(image())
+    .pipe(gulp.dest('source/img/compressed/raster'));
+});
+
+gulp.task("copy-images", function () {
+  return gulp.src([
+    "source/img/compressed/**/*.*"
+  ], {
+    base: "source/img/compressed"
+  })
+    .pipe(gulp.dest("build/img/"));
 });
 
 gulp.task("svg", function () {
@@ -105,13 +119,16 @@ gulp.task("svg", function () {
     .pipe(gulp.dest("build/img/vector"));
 });
 
-gulp.task("sprite", function () {
+gulp.task("sprite", ["svg"], function () {
   return gulp.src("build/img/vector/sprite/*.svg")
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img/vector"));
 });
 
+gulp.task("del-sprite", function () {
+  return del("build/img/vector/sprite{.svg,/}");
+});
 
 gulp.task("clean", function () {
   return del("build");
@@ -120,7 +137,7 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/*.{woff,woff2}",
-      "source/js/**"
+      "source/js/**/*.js"
     ], {
       base: "source"
     })
@@ -139,7 +156,7 @@ gulp.task("serve", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
-  gulp.watch("source/js/*.js", ["script-min", "script-concat"]).on("change", server.reload);
+  gulp.watch("source/js/*.js", ["script"]).on("change", server.reload);
 });
 
 
@@ -149,14 +166,16 @@ gulp.task("build", function (done) {
     "copy",
     "webp",
     "images",
-    "svg",
+    "copy-images",
     "sprite",
     "html",
+    "del-sprite",
     "style",
-    "script-min",
-    "script-concat",
+    "script",
     done
   );
 });
 
-ghpages.publish("build");
+ghpages.publish('build', {
+  message: 'Update at ' + new Date()
+});

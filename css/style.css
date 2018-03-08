@@ -1545,9 +1545,12 @@ input:disabled .theme__btn {
 }
 @media (min-width: 1300px) {
   .program__item {
-    width: 570px;
+    -ms-flex: 1 0 460px;
+        flex: 1 0 460px;
     margin: 40px;
-    padding: 25px 50px;
+    padding: 25px 50px; 
+
+    -webkit-box-flex: 1;
   }
   .program__item:last-child {
     margin-bottom: 40px;

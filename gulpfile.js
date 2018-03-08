@@ -126,10 +126,6 @@ gulp.task("sprite", ["svg"], function () {
     .pipe(gulp.dest("build/img/vector"));
 });
 
-gulp.task("del-sprite", function () {
-  return del("build/img/vector/sprite{.svg,/}");
-});
-
 gulp.task("clean", function () {
   return del("build");
 });
@@ -169,7 +165,6 @@ gulp.task("build", function (done) {
     "copy-images",
     "sprite",
     "html",
-    "del-sprite",
     "style",
     "script",
     done

@@ -9,6 +9,7 @@
     "browser-sync": "2.23.x",
     "css-mqpacker": "^6.0.2",
     "del": "^3.0.0",
+    "gh-pages": "^1.1.0",
     "gulp": "3.9.x",
     "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
@@ -40,7 +41,7 @@
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
     "start": "npm run build && gulp serve",
-    "deploy": "gulp deploy"
+    "deploy": "gh-pages -d build"
   },
   "pre-commit": "test",
   "browserslist": [

@@ -176,7 +176,6 @@ gulp.task("build", function (done) {
   );
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('build/')
-    .pipe(ghPages());
+ghpages.publish('build', {
+  message: 'Update at ' + new Date()
 });

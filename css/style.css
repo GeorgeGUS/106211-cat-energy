@@ -1514,8 +1514,11 @@ input:disabled .theme__btn {
   .program__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; 
+    display: flex;
+        flex-wrap: wrap; 
     padding: 0;
+
+    -ms-flex-wrap: wrap;
   }
 }
 

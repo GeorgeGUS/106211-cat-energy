@@ -29,7 +29,7 @@ var svgmin = require('gulp-svgmin');
 
 var run = require("run-sequence");
 var server = require("browser-sync").create();
-var ghPages = require('gulp-gh-pages');
+var ghpages = require('gh-pages');
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
@@ -176,7 +176,6 @@ gulp.task("build", function (done) {
   );
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('build/')
-    .pipe(ghPages());
+ghpages.publish('build', {
+  message: 'Update at ' + new Date()
 });

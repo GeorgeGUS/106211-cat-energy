@@ -13,7 +13,7 @@
   top: 0;
   right: 0;
 
-  .no-js & {
+  .page-nav--no-js & {
     display: none;
   }
 
@@ -28,7 +28,7 @@
   padding: 0;
   list-style: none;
 
-  .no-js &,
+  .page-nav--no-js &,
   .page-nav--opened & {
     display: block;
 
